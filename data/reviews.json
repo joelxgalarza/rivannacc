@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah M.",
+    "initial": "S",
+    "rating": 5,
+    "source": "Google",
+    "date": "August 2026",
+    "service": "Recurring Maid Service",
+    "text": "We started biweekly cleanings a few months ago and it's made a real difference in our house. The team is always on time and easy to communicate with.",
+    "placeholder": true
+  },
+  {
+    "id": 2,
+    "name": "David R.",
+    "initial": "D",
+    "rating": 5,
+    "source": "Yelp",
+    "date": "July 2026",
+    "service": "Deep Cleaning",
+    "text": "Booked a deep clean before hosting family for the weekend. Every room looked great, including spots I usually forget about. Would book again.",
+    "placeholder": true
+  },
+  {
+    "id": 3,
+    "name": "Priya K.",
+    "initial": "P",
+    "rating": 4,
+    "source": "Google",
+    "date": "July 2026",
+    "service": "Move-Out / Move-In Cleaning",
+    "text": "Used this for a move-out clean and it saved me a weekend of scrubbing. Communication was clear about what was included in the price.",
+    "placeholder": true
+  },
+  {
+    "id": 4,
+    "name": "Marcus T.",
+    "initial": "M",
+    "rating": 5,
+    "source": "Direct",
+    "date": "June 2026",
+    "service": "AirBnB / Short-Term Rental Turnover",
+    "text": "Turnover cleanings between guests have been consistent and fast, which matters a lot for same-day bookings. Good communication when schedules change.",
+    "placeholder": true
+  },
+  {
+    "id": 5,
+    "name": "Alyssa F.",
+    "initial": "A",
+    "rating": 5,
+    "source": "Google",
+    "date": "June 2026",
+    "service": "Apartment Cleaning",
+    "text": "Easy to schedule and the apartment smelled and looked noticeably cleaner afterward. Appreciated the heads-up text before arrival.",
+    "placeholder": true
+  },
+  {
+    "id": 6,
+    "name": "James O.",
+    "initial": "J",
+    "rating": 4,
+    "source": "Yelp",
+    "date": "May 2026",
+    "service": "Office Cleaning",
+    "text": "We use this for our small office a couple times a month. Reliable and the front area always looks presentable for clients.",
+    "placeholder": true
+  }
+]
