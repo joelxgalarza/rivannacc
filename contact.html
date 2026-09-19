@@ -155,9 +155,15 @@
                 </select>
               </div>
             </div>
-            <div class="field" style="margin-top:1rem;">
-              <label for="c-address">Address or Neighborhood</label>
-              <input type="text" id="c-address" name="address" placeholder="e.g. Pantops, Crozet, Lake Monticello...">
+            <div class="form-grid two-col" style="margin-top:1rem;">
+              <div class="field">
+                <label for="c-address">Address or Neighborhood</label>
+                <input type="text" id="c-address" name="address" placeholder="e.g. Pantops, Crozet, Lake Monticello...">
+              </div>
+              <div class="field">
+                <label for="c-zip">ZIP Code <span class="req">*</span></label>
+                <input type="text" id="c-zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
+              </div>
             </div>
             <div class="field" style="margin-top:1rem;">
               <label for="c-message">Message</label>
