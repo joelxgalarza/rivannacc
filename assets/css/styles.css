@@ -128,7 +128,6 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 }
 .top-bar a { color: var(--color-surface-alt); }
 .top-bar ul { display: flex; flex-wrap: wrap; gap: 1.1rem; }
-.top-bar .tbd { opacity: 0.85; font-style: italic; }
 .top-bar .top-bar-book { font-weight: 700; text-decoration: underline; }
 
 /* ---------------------------------------------------------------------
@@ -152,7 +151,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .nav-cta { display: flex; align-items: center; gap: 0.6rem; }
 /* Phone number subtitle is already shown in the top bar; hiding it here keeps the
    header nav from needing more width than the page container actually has. */
-.nav-cta .phone-tbd { display: none; }
+.nav-cta .phone-num { display: none; }
 
 /* Plain button + nav toggle (no <details>, no cross-browser display:contents reliance) */
 .nav-toggle {
@@ -534,7 +533,6 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 .contact-info-item { display: flex; gap: 0.9rem; align-items: flex-start; }
 .contact-info-item .icon { color: var(--color-action); flex-shrink: 0; margin-top: 0.15rem; }
 .contact-info-item strong { display: block; }
-.contact-info-item .tbd-flag { color: var(--color-text-muted); font-weight: 700; font-style: italic; font-size: 0.85rem; }
 .koala-slot {
   border: 1px dashed var(--color-border); padding: 1.5rem; margin-top: 1.5rem;
   background: var(--color-surface-alt); font-size: 0.9rem; color: var(--color-text-muted);
@@ -573,7 +571,6 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 .footer-social a:hover { background: rgba(255,255,255,0.12); color: var(--color-surface); }
 .footer-contact li { display: flex; gap: 0.6rem; margin-bottom: 0.75rem; font-size: 1rem; align-items: flex-start; }
 .footer-contact .icon { flex-shrink: 0; margin-top: 0.15rem; color: var(--color-surface-alt); }
-.footer-contact .tbd { font-style: italic; opacity: 0.85; }
 .footer-bottom { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; justify-content: space-between; align-items: center; padding-block: 1.5rem; font-size: 0.92rem; color: var(--color-surface-alt); }
 .footer-bottom .legal-links { display: flex; gap: 1.25rem; }
 .footer-bottom a { color: var(--color-surface-alt); }
