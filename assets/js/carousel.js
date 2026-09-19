@@ -5,14 +5,11 @@
  * autoplay (pausing on hover/focus/touch and prefers-reduced-motion),
  * and full keyboard arrow support.
  *
- * NOTE ON REVIEW SCHEMA MARKUP: this carousel intentionally does NOT
- * emit Review / AggregateRating JSON-LD while every review in
- * reviews.json carries "placeholder": true. Adding that structured
- * data for sample reviews would be structured-data spam under
- * Google's guidelines. Once real reviews replace the placeholders,
- * add Review/AggregateRating JSON-LD in a <script type="application/ld+json">
- * block in the <head> of index.html and reviews.html. See the TODO
- * comment left near the carousel markup on each page.
+ * NOTE ON REVIEW SCHEMA MARKUP: this carousel does not emit Review /
+ * AggregateRating JSON-LD itself. That markup lives in a static
+ * <script type="application/ld+json"> block in the <head> of index.html
+ * and reviews.html — keep it in sync with data/reviews.json when reviews
+ * change.
  */
 (function () {
   "use strict";
@@ -37,7 +34,7 @@
     return out;
   }
 
-  var AVATAR_COLORS = ["#0F6E6A", "#E3A73B", "#3B7A8C", "#8C5E3B", "#5E7A3B", "#7A3B6E"];
+  var AVATAR_COLORS = ["#9C3B2E", "#3D5A73", "#7E2D22", "#2F4759", "#B95747", "#5B7A93"];
 
   function colorForName(name) {
     var sum = 0;
@@ -58,10 +55,6 @@
     card.setAttribute("aria-roledescription", "slide");
     card.setAttribute("aria-label", review.name + ", rated " + review.rating + " out of 5");
 
-    var sampleBadge = review.placeholder
-      ? '<span class="sample-badge">Sample review</span>'
-      : "";
-
     card.innerHTML =
       '<div class="review-head">' +
       '<div class="avatar-bubble" style="background:' +
@@ -80,7 +73,6 @@
       "<span>" +
       escapeHTML(review.date) +
       "</span>" +
-      sampleBadge +
       "</span>" +
       "</div>" +
       "</div>" +
@@ -125,7 +117,7 @@
       })
       .catch(function (err) {
         viewport.innerHTML =
-          '<p style="padding:1rem;color:#4B5768;">Reviews are temporarily unavailable. (' +
+          '<p style="padding:1rem;color:var(--color-text-muted);">Reviews are temporarily unavailable. (' +
           escapeHTML(err.message) +
           ")</p>";
         // Local file:// testing note: fetch() of a local JSON file is blocked by

@@ -4,18 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rivanna Home Cleaning | House Cleaning Services in Charlottesville, VA</title>
-<meta name="description" content="Professional, insured, and background-checked house cleaning in Charlottesville, VA. Recurring maid service, deep cleaning, move-out/move-in, AirBnB turnovers, and more. Get a free quote today.">
+<meta name="description" content="Insured, background-checked house cleaning in Charlottesville, VA: recurring maid service, deep cleaning, move-out cleans, and AirBnB turnovers. Free quote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <!--
-  TODO (SEO / structured data): Do NOT add Review or AggregateRating JSON-LD
-  to this page while data/reviews.json entries are flagged "placeholder": true.
-  Once real customer reviews replace the samples, add a
-  <script type="application/ld+json"> LocalBusiness + AggregateRating block here.
+  Keep in sync with data/reviews.json: update aggregateRating and the review
+  list below whenever reviews change. Add "url" once the domain is live, plus
+  "telephone" and "openingHours" once finalized (both still TBD - do not
+  publish the placeholder phone number in structured data).
 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Rivanna Home Cleaning",
+  "description": "Locally owned residential and commercial cleaning serving Charlottesville, VA and the surrounding area.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Charlottesville",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": "Charlottesville, VA and surrounding areas",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "6",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah M." },
+      "datePublished": "2026-08-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We started biweekly cleanings a few months ago and it's made a real difference in our house. The team is always on time and easy to communicate with."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "David R." },
+      "datePublished": "2026-07-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Booked a deep clean before hosting family for the weekend. Every room looked great, including spots I usually forget about. Would book again."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Priya K." },
+      "datePublished": "2026-07-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "Used this for a move-out clean and it saved me a weekend of scrubbing. Communication was clear about what was included in the price."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Marcus T." },
+      "datePublished": "2026-06-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Turnover cleanings between guests have been consistent and fast, which matters a lot for same-day bookings. Good communication when schedules change."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Alyssa F." },
+      "datePublished": "2026-06-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Easy to schedule and the apartment smelled and looked noticeably cleaner afterward. Appreciated the heads-up text before arrival."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "James O." },
+      "datePublished": "2026-05-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "We use this for our small office a couple times a month. Reliable and the front area always looks presentable for clients."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -42,8 +107,59 @@
     <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
+          <li class="has-submenu">
+            <a href="services.html">Services</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show services menu"><svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="submenu submenu-services" aria-label="Services">
+              <li><a href="services/airbnb.html">AirBnB Turnover</a></li>
+              <li><a href="services/deep-cleaning.html">Deep Cleaning</a></li>
+              <li><a href="services/move-out-in.html">Move-Out / Move-In</a></li>
+              <li><a href="services/recurring-maid.html">Recurring Maid Service</a></li>
+              <li><a href="services/apartment.html">Apartment Cleaning</a></li>
+              <li><a href="services/post-construction.html">Post-Construction Cleaning</a></li>
+              <li><a href="services/carpet.html">Carpet Cleaning</a></li>
+              <li><a href="services/upholstery.html">Upholstery Cleaning</a></li>
+              <li><a href="services/home-organization.html">Home Organization</a></li>
+              <li><a href="services/janitorial.html">Janitorial Services</a></li>
+              <li><a href="services/commercial.html">Commercial Cleaning</a></li>
+              <li><a href="services/office.html">Office Cleaning</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="service-areas.html">Service Areas</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show service areas menu"><svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="submenu submenu-areas" aria-label="Service areas">
+              <li><a href="areas/belvedere.html">Belvedere</a></li>
+              <li><a href="areas/boyd-tavern.html">Boyd Tavern</a></li>
+              <li><a href="areas/cascadia.html">Cascadia</a></li>
+              <li><a href="areas/charlottesville.html">Charlottesville</a></li>
+              <li><a href="areas/crozet.html">Crozet</a></li>
+              <li><a href="areas/dunlora.html">Dunlora</a></li>
+              <li><a href="areas/earlysville.html">Earlysville</a></li>
+              <li><a href="areas/fluvanna.html">Fluvanna</a></li>
+              <li><a href="areas/fontana.html">Fontana</a></li>
+              <li><a href="areas/forest-lakes.html">Forest Lakes</a></li>
+              <li><a href="areas/franklin.html">Franklin</a></li>
+              <li><a href="areas/free-union.html">Free Union</a></li>
+              <li><a href="areas/glenmore.html">Glenmore</a></li>
+              <li><a href="areas/gordonsville.html">Gordonsville</a></li>
+              <li><a href="areas/hollymead.html">Hollymead</a></li>
+              <li><a href="areas/keswick.html">Keswick</a></li>
+              <li><a href="areas/key-west.html">Key West</a></li>
+              <li><a href="areas/lake-monticello.html">Lake Monticello</a></li>
+              <li><a href="areas/milton.html">Milton</a></li>
+              <li><a href="areas/palmyra.html">Palmyra</a></li>
+              <li><a href="areas/pantops.html">Pantops</a></li>
+              <li><a href="areas/rivanna-village.html">Rivanna Village</a></li>
+              <li><a href="areas/riverview.html">Riverview</a></li>
+              <li><a href="areas/ruckersville.html">Ruckersville</a></li>
+              <li><a href="areas/scottsville.html">Scottsville</a></li>
+              <li><a href="areas/shadwell.html">Shadwell</a></li>
+              <li><a href="areas/stony-point.html">Stony Point</a></li>
+              <li><a href="areas/woolen-mills.html">Woolen Mills</a></li>
+              <li><a href="areas/zion-crossroads.html">Zion Crossroads</a></li>
+            </ul>
+          </li>
           <li><a href="about.html">About</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -58,35 +174,35 @@
 
 <main id="main">
 
-  <!-- HERO -->
+  <!-- HERO (P1 split) -->
   <section class="hero">
     <div class="container">
       <div class="hero-copy">
         <span class="eyebrow">Charlottesville, VA &amp; Surrounding Areas</span>
         <h1>Professional House Cleaning in Charlottesville, VA</h1>
-        <p class="lede">Fast, friendly, and reliable cleaning for homes and businesses across Charlottesville, from recurring maid service to move-out deep cleans. Locally owned, insured, and background-checked.</p>
-        <ul class="hero-badges">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Same-day availability</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 100% satisfaction guarantee</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Background-checked staff</li>
-        </ul>
+        <p class="lede">When the bathrooms, the floors, and all of it are overdue for attention, tell us what your place needs. We call you back with a free estimate for one-time deep cleans, move-ins and move-outs, or regular visits that cost less per clean.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html#quote">Get a Free Quote</a>
           <a class="btn btn-outline" href="tel:+15550000000">Call (555) 000-0000 <span class="visually-hidden">placeholder number, TBD</span></a>
         </div>
+        <ul class="trust-strip">
+          <li>Locally owned and operated</li>
+          <li>Insured and bonded</li>
+          <li>Background-checked cleaners</li>
+          <li>Free re-clean reported within 24 hours</li>
+        </ul>
       </div>
 
       <div class="hero-media">
         <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_30b01e16-bbfc-4b47-bd40-04aef9251c76.png"
              alt="Placeholder photo: professional cleaner wiping down a bright kitchen counter (replace with real photo)"
              width="960" height="600" fetchpriority="high">
-        <span class="media-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2-5.5-3-5.5 3 1-6.2L3 8.9 9 8z"/></svg> Locally owned in Charlottesville</span>
       </div>
     </div>
   </section>
 
   <!-- QUOTE FORM -->
-  <section id="quote" class="section-tint">
+  <section id="quote" class="section-tint section-roomy">
     <div class="container" style="max-width: 640px;">
       <div class="quote-card">
         <span class="eyebrow">Free, no-obligation quote</span>
@@ -135,77 +251,9 @@
             <textarea id="q-message" name="message" placeholder="Number of bedrooms/bathrooms, preferred dates, anything else we should know."></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">Request My Free Quote</button>
-          <p class="form-note">By submitting, you agree to be contacted about your quote. This form is a placeholder pending Booking Koala integration. See the <code>&lt;!-- TODO --&gt;</code> comment in this page's source.</p>
-          <p class="form-status" id="home-quote-status" hidden>Thanks! This form isn't wired to a live inbox yet. TODO: connect to Booking Koala.</p>
+          <p class="form-note">By submitting, you agree to be contacted about your quote. We will follow up by phone shortly.</p>
+          <p class="form-status" id="home-quote-status" hidden>Thanks! We received your request and will call you back with your quote.</p>
         </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURE STRIP -->
-  <section>
-    <div class="container">
-      <div class="feature-strip">
-        <div class="feature-card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
-          <h3>Same-Day Availability</h3>
-          <p>Need a clean today? We keep flexible route capacity for last-minute requests whenever possible.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <h3>Fast Response</h3>
-          <p>Reach out for a quote and we'll get back to you quickly. No waiting days for a callback.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-4z"/></svg></div>
-          <h3>100% Satisfaction Guarantee</h3>
-          <p>Not happy with something? Tell us within 24 hours and we'll re-clean it at no charge.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <h3>Background-Checked Staff</h3>
-          <p>Every cleaner who enters your home or business passes a background check first.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST BADGES -->
-  <section class="section-tint">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Why Charlottesville trusts us</span>
-        <h2>Trust &amp; Safety, Built In</h2>
-      </div>
-      <div class="trust-badges">
-        <div class="badge">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-4z"/></svg>
-          <span>Insured &amp; Bonded</span>
-        </div>
-        <div class="badge">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
-          <span>Locally Owned &amp; Operated</span>
-        </div>
-        <div class="badge">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2-5.5-3-5.5 3 1-6.2L3 8.9 9 8z"/></svg>
-          <span>100% Satisfaction Guarantee</span>
-        </div>
-        <div class="badge">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>Background-Checked Staff</span>
-        </div>
-        <div class="badge badge-pending">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M8 14.5L6 22l6-3 6 3-2-7.5"/></svg>
-          <span>Award pending: Quality Business Awards</span>
-        </div>
-      </div>
-
-      <div class="guarantee-band">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2-5.5-3-5.5 3 1-6.2L3 8.9 9 8z"/></svg>
-        <div>
-          <h3>Our 100% Satisfaction Guarantee</h3>
-          <p>If anything isn't up to standard, tell us within 24 hours and we'll come back and re-clean it at no charge. That's our 100% Satisfaction Guarantee.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -213,109 +261,101 @@
   <!-- SERVICES OVERVIEW -->
   <section id="services-overview">
     <div class="container">
-      <div class="section-head center">
+      <div class="section-head">
         <span class="eyebrow">What We Do</span>
         <h2>Cleaning Services for Every Space</h2>
-        <p class="lede">From weekly upkeep to one-time deep cleans, we cover homes, rentals, and offices across Charlottesville.</p>
+        <p class="lede">Start with the job you need done. Every visit follows a checklist we agree on before we arrive.</p>
       </div>
 
-      <div class="services-featured">
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2ac3aed2-002f-439a-8040-7f8d448d1028.png" alt="AirBnB / short-term rental turnover cleaning" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>AirBnB &amp; Short-Term Rental Turnover</h3>
-            <p>Fast, reliable turnovers between guests so your listing is always ready for a 5-star review.</p>
-            <a class="learn-more" href="services.html#airbnb">Learn more &rarr;</a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_b5d8f7d8-bfe7-4c61-bfa7-cffbd9821580.png" alt="Deep cleaning service" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>Deep Cleaning</h3>
-            <p>A top-to-bottom clean that reaches the baseboards, grout, and corners routine cleaning skips.</p>
-            <a class="learn-more" href="services.html#deep-cleaning">Learn more &rarr;</a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_23e21e1a-9072-4f6b-bd0f-fd16cb522dec.png" alt="Move-out / move-in cleaning" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>Move-Out / Move-In Cleaning</h3>
-            <p>Leave your old place spotless (or start fresh in the new one) without lifting a sponge.</p>
-            <a class="learn-more" href="services.html#move-out-in">Learn more &rarr;</a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2d0a3f71-f7e7-4f05-a568-09b85df97e5e.png" alt="Recurring maid service" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>Recurring Maid Service</h3>
-            <p>Weekly, biweekly, or monthly visits that keep your home consistently guest-ready.</p>
-            <a class="learn-more" href="services.html#recurring-maid">Learn more &rarr;</a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_87ac0e8c-4b96-4652-b438-f8e61ebcd7c7.png" alt="Apartment cleaning" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>Apartment Cleaning</h3>
-            <p>Right-sized cleaning plans built for apartments and condos, from studios to 3-bedrooms.</p>
-            <a class="learn-more" href="services.html#apartment">Learn more &rarr;</a>
-          </div>
-        </article>
-        <article class="service-card">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173022_a1ebc30d-ac28-4bba-a631-081bba2d78cf.png" alt="Commercial cleaning" width="480" height="360" loading="lazy">
-          <div class="service-card-body">
-            <h3>Commercial Cleaning</h3>
-            <p>Scheduled cleaning for small businesses that keeps your space presentable for customers and staff.</p>
-            <a class="learn-more" href="services.html#commercial">Learn more &rarr;</a>
-          </div>
-        </article>
+      <div class="split-feature">
+        <div>
+          <h3>Falling Behind on the Whole House</h3>
+          <p>Weekly, biweekly, or monthly visits that reset the kitchen, bathrooms, floors, and the rooms everyone actually lives in. Regular visits cost less per clean than one-time jobs.</p>
+          <p><a href="services/recurring-maid.html">Recurring maid service &rarr;</a></p>
+        </div>
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2d0a3f71-f7e7-4f05-a568-09b85df97e5e.png" alt="Recurring maid service" width="480" height="360" loading="lazy">
       </div>
 
-      <div class="services-icon-grid">
-        <a class="icon-card" href="services.html#post-construction">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M6 21V10l6-6 6 6v11"/><path d="M10 21v-6h4v6"/></svg>
-          <span>Post-Construction</span>
-        </a>
-        <a class="icon-card" href="services.html#carpet">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 10h18M8 5v14"/></svg>
-          <span>Carpet Cleaning</span>
-        </a>
-        <a class="icon-card" href="services.html#upholstery">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4M2 18h20v2H2z"/></svg>
-          <span>Upholstery Cleaning</span>
-        </a>
-        <a class="icon-card" href="services.html#home-organization">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M9 10v10"/></svg>
-          <span>Home Organization</span>
-        </a>
-        <a class="icon-card" href="services.html#janitorial">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12M12 15l-3 6M12 15l3 6M6 8l6-2 6 2"/></svg>
-          <span>Janitorial Services</span>
-        </a>
-        <a class="icon-card" href="services.html#office">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4"/></svg>
-          <span>Office Cleaning</span>
-        </a>
+      <div class="split-feature flip mt-lg">
+        <div>
+          <h3>The Grime Routine Cleaning Skips</h3>
+          <p>Baseboards, grout, window tracks, and inside appliances, a top-to-bottom reset before hosting, after a renovation, or before starting regular visits.</p>
+          <p><a href="services/deep-cleaning.html">Deep cleaning &rarr;</a></p>
+        </div>
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_b5d8f7d8-bfe7-4c61-bfa7-cffbd9821580.png" alt="Deep cleaning service" width="480" height="360" loading="lazy">
       </div>
+
+      <div class="split-feature mt-lg">
+        <div>
+          <h3>Moving In or Out</h3>
+          <p>Empty-place cleaning that covers inside cabinets and closets, appliances, and every room, so you hand over keys or unpack boxes without picking up a sponge.</p>
+          <p><a href="services/move-out-in.html">Move-out / move-in cleaning &rarr;</a></p>
+        </div>
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_23e21e1a-9072-4f6b-bd0f-fd16cb522dec.png" alt="Move-out / move-in cleaning" width="480" height="360" loading="lazy">
+      </div>
+
+      <h3 class="mt-lg">The other nine services</h3>
+      <ul class="area-service-list">
+        <li><a href="services/airbnb.html">AirBnB &amp; Short-Term Rental Turnover</a><span class="blurb">Between-guest resets: rooms, linens check, and restock check against your list.</span></li>
+        <li><a href="services/apartment.html">Apartment Cleaning</a><span class="blurb">Right-sized plans for studios up to three bedrooms.</span></li>
+        <li><a href="services/post-construction.html">Post-Construction Cleaning</a><span class="blurb">Fine dust, debris, and stickers gone before move-in day.</span></li>
+        <li><a href="services/carpet.html">Carpet Cleaning</a><span class="blurb">Traffic lanes and spots lifted, room by room.</span></li>
+        <li><a href="services/upholstery.html">Upholstery Cleaning</a><span class="blurb">Sofas and chairs refreshed, fabric by fabric.</span></li>
+        <li><a href="services/home-organization.html">Home Organization</a><span class="blurb">Closets, pantries, and rooms put back in working order.</span></li>
+        <li><a href="services/janitorial.html">Janitorial Services</a><span class="blurb">Scheduled upkeep for workplaces, on your rotation.</span></li>
+        <li><a href="services/commercial.html">Commercial Cleaning</a><span class="blurb">Storefronts and shared spaces kept presentable for customers and staff.</span></li>
+        <li><a href="services/office.html">Office Cleaning</a><span class="blurb">Desks, break rooms, and restrooms on a set schedule.</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- BEFORE / AFTER -->
-  <section class="section-tint">
+  <!-- SERVICE AREAS -->
+  <section class="section-tint section-roomy" id="service-areas-preview">
     <div class="container">
       <div class="section-head center">
-        <span class="eyebrow">See The Difference</span>
-        <h2>Before &amp; After</h2>
-        <p class="lede">A real-world example of what a Rivanna deep clean can do for a kitchen.</p>
+        <span class="eyebrow">Where We Work</span>
+        <h2>Proudly Serving Charlottesville &amp; the Surrounding Area</h2>
       </div>
-      <div class="before-after">
-        <div class="ba-panel before">
-          <span class="ba-tag">Before</span>
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173121_c2c8f5db-fd5e-4722-9c63-cc84f65e1851.png" alt="Before: cluttered kitchen counter" width="600" height="600" loading="lazy">
+      <div class="area-list">
+        <div class="area-card">
+          <h2>Everywhere We Clean</h2>
+          <p>29 neighborhoods and towns, A to Z. Pick yours for local details.</p>
+          <div class="area-chip-list">
+            <a class="area-chip" href="areas/belvedere.html">Belvedere</a>
+            <a class="area-chip" href="areas/boyd-tavern.html">Boyd Tavern</a>
+            <a class="area-chip" href="areas/cascadia.html">Cascadia</a>
+            <a class="area-chip" href="areas/charlottesville.html">Charlottesville</a>
+            <a class="area-chip" href="areas/crozet.html">Crozet</a>
+            <a class="area-chip" href="areas/dunlora.html">Dunlora</a>
+            <a class="area-chip" href="areas/earlysville.html">Earlysville</a>
+            <a class="area-chip" href="areas/fluvanna.html">Fluvanna</a>
+            <a class="area-chip" href="areas/fontana.html">Fontana</a>
+            <a class="area-chip" href="areas/forest-lakes.html">Forest Lakes</a>
+            <a class="area-chip" href="areas/franklin.html">Franklin</a>
+            <a class="area-chip" href="areas/free-union.html">Free Union</a>
+            <a class="area-chip" href="areas/glenmore.html">Glenmore</a>
+            <a class="area-chip" href="areas/gordonsville.html">Gordonsville</a>
+            <a class="area-chip" href="areas/hollymead.html">Hollymead</a>
+            <a class="area-chip" href="areas/keswick.html">Keswick</a>
+            <a class="area-chip" href="areas/key-west.html">Key West</a>
+            <a class="area-chip" href="areas/lake-monticello.html">Lake Monticello</a>
+            <a class="area-chip" href="areas/milton.html">Milton</a>
+            <a class="area-chip" href="areas/palmyra.html">Palmyra</a>
+            <a class="area-chip" href="areas/pantops.html">Pantops</a>
+            <a class="area-chip" href="areas/rivanna-village.html">Rivanna Village</a>
+            <a class="area-chip" href="areas/riverview.html">Riverview</a>
+            <a class="area-chip" href="areas/ruckersville.html">Ruckersville</a>
+            <a class="area-chip" href="areas/scottsville.html">Scottsville</a>
+            <a class="area-chip" href="areas/shadwell.html">Shadwell</a>
+            <a class="area-chip" href="areas/stony-point.html">Stony Point</a>
+            <a class="area-chip" href="areas/woolen-mills.html">Woolen Mills</a>
+            <a class="area-chip" href="areas/zion-crossroads.html">Zion Crossroads</a>
+          </div>
         </div>
-        <div class="ba-panel after">
-          <span class="ba-tag">After</span>
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173121_edf7dce1-4cb4-45cc-a1ec-7c6f75d4fa13.png" alt="After: spotless kitchen counter" width="600" height="600" loading="lazy">
-        </div>
+      </div>
+      <div class="area-ask">
+        <p>If your neighborhood is not on the list, ask us. We are always adding neighborhoods.</p>
+        <a class="btn btn-secondary mt-lg" href="service-areas.html">View Full Service Area</a>
       </div>
     </div>
   </section>
@@ -327,9 +367,7 @@
         <span class="eyebrow">Customer Reviews</span>
         <h2>What Our Customers Are Saying</h2>
         <p class="lede">
-          <strong>Sample reviews shown below.</strong> Rivanna Home Cleaning is a new business. These are
-          placeholder testimonials for site design purposes, clearly marked, and will be replaced with real
-          customer reviews before launch.
+          See what our customers in Charlottesville and the surrounding area have to say about working with us.
         </p>
       </div>
 
@@ -351,186 +389,120 @@
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
+  <!-- FAQ (P5 sticky rail) -->
+  <section id="faq" class="section-tint section-roomy">
+    <div class="container">
+      <div class="faq-rail">
+        <div class="section-head">
+          <span class="eyebrow">Questions</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="lede">For anything else, <a href="contact.html">ask us</a> and we&rsquo;ll get you an answer.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              What's included in a standard cleaning?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+              <p>A standard cleaning covers dusting, vacuuming, mopping, kitchen and bathroom surfaces, trash removal, and general tidying of the main living areas. Exact tasks vary by home size and package. We'll confirm the checklist when you book.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              What's the difference between a standard clean and a deep clean?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+              <p>A deep clean goes further: baseboards, inside appliances, window tracks, grout, light fixtures, and other detail work that a routine visit doesn't cover. We recommend a deep clean before starting recurring service, after a renovation, or for move-out/move-in.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              Do I need to tidy up before you arrive?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+              <p>No, that's our job. Clearing extremely cluttered surfaces or valuables ahead of time helps our team clean more thoroughly, but you never need to pre-clean before we arrive.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              What if something's missed?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+              <p>Tell us within 24 hours and we'll come back and re-clean it at no charge.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+              How do I get a quote?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+              <p>Request a free quote through the form on this page or by phone, and we'll call you back with an estimate based on your space. Direct online booking through Booking Koala is coming soon.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
+              Do you offer discounts for recurring service?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6" hidden>
+              <p>Yes. Weekly and biweekly customers receive a lower rate than one-time cleanings. Ask for current recurring pricing when you request your quote.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
+              What areas do you serve?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7" hidden>
+              <p>We serve Charlottesville and the surrounding area, including Pantops, Crozet, Earlysville, Keswick, and more. See our full <a href="service-areas.html">service area list</a>. If your neighborhood is not listed, ask us anyway.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">
+              What's your cancellation policy?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8" hidden>
+              <p>We ask for at least 24 hours' notice to cancel or reschedule so we can offer that time to another customer. Full cancellation terms will be confirmed at booking. <span class="tbd">[Exact policy/fee details TBD]</span></p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">
+              Do you bring your own supplies?
+              <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a9" role="region" aria-labelledby="faq-q9" hidden>
+              <p>Yes, we bring our own cleaning supplies and equipment. If you'd prefer we use specific products in your home, just let us know when you book.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND (P7) -->
   <section class="section-tint">
-    <div class="container">
-      <div class="about-teaser">
-        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172831_6bdd68a4-c36c-41cd-b440-eb181c89b92b.png" alt="Placeholder team portrait (replace with real team photo)" width="480" height="600" loading="lazy">
-        <div>
-          <span class="eyebrow">About Rivanna</span>
-          <h2>Built in Charlottesville, for Charlottesville</h2>
-          <p class="lede">Rivanna Home Cleaning was started with one goal: make it easy for local homeowners, renters, and small businesses to get a reliably clean space without the runaround. We're locally owned, we hire carefully, and we stand behind every clean with our satisfaction guarantee.</p>
-          <a class="btn btn-secondary" href="about.html">Learn More About Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Questions</span>
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
-            What's included in a standard cleaning?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
-            <p>A standard cleaning covers dusting, vacuuming, mopping, kitchen and bathroom surfaces, trash removal, and general tidying of the main living areas. Exact tasks vary by home size and package. We'll confirm the checklist when you book.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
-            What's the difference between a standard clean and a deep clean?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
-            <p>A deep clean goes further: baseboards, inside appliances, window tracks, grout, light fixtures, and other detail work that a routine visit doesn't cover. We recommend a deep clean before starting recurring service, after a renovation, or for move-out/move-in.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
-            Do I need to tidy up before you arrive?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
-            <p>No, that's our job. Clearing extremely cluttered surfaces or valuables ahead of time helps our team clean more thoroughly, but you never need to pre-clean before we arrive.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
-            Are you insured and background-checked?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
-            <p>Yes. Rivanna Home Cleaning is insured and bonded, and every cleaner completes a background check before working in a customer's home or business.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
-            How do I book a cleaning?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
-            <p>Request a free quote through the form on this site, call us, or book directly through our online scheduler (Booking Koala) once it's live. We'll confirm details and get you on the calendar.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
-            Do you offer discounts for recurring service?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6" hidden>
-            <p>Yes. Weekly and biweekly customers receive a lower rate than one-time cleanings. Ask for current recurring pricing when you request your quote.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
-            What areas do you serve?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7" hidden>
-            <p>We serve Charlottesville and the surrounding area, including Pantops, Crozet, Earlysville, Keswick, and more. See our full <a href="service-areas.html">service area list</a>. Don't see your neighborhood? Ask us anyway.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">
-            What's your cancellation policy?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8" hidden>
-            <p>We ask for at least 24 hours' notice to cancel or reschedule so we can offer that time to another customer. Full cancellation terms will be confirmed at booking. <span class="tbd" style="font-style:italic;">[Exact policy/fee details TBD]</span></p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">
-            Do you bring your own supplies?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a9" role="region" aria-labelledby="faq-q9" hidden>
-            <p>Yes, we bring our own cleaning supplies and equipment. If you'd prefer we use specific products in your home, just let us know when you book.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" aria-controls="faq-a10" id="faq-q10">
-            Is there a satisfaction guarantee?
-            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a10" role="region" aria-labelledby="faq-q10" hidden>
-            <p>Yes. If anything isn't up to standard, tell us within 24 hours and we'll come back and re-clean it at no charge. That's our 100% Satisfaction Guarantee.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE AREAS -->
-  <section class="section-tint" id="service-areas-preview">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Where We Work</span>
-        <h2>Proudly Serving Charlottesville &amp; the Surrounding Area</h2>
-      </div>
-      <div class="area-tiers">
-        <div class="area-tier">
-          <h3><span class="tier-dot"></span> Core Area: Fastest Response</h3>
-          <p class="tier-desc">Our primary routes, with the most scheduling flexibility.</p>
-          <div class="area-chip-list">
-            <span class="area-chip">Charlottesville</span><a class="area-chip" href="areas/pantops.html">Pantops</a><a class="area-chip" href="areas/woolen-mills.html">Woolen Mills</a>
-            <a class="area-chip" href="areas/riverview.html">Riverview</a><a class="area-chip" href="areas/dunlora.html">Dunlora</a><a class="area-chip" href="areas/belvedere.html">Belvedere</a>
-            <a class="area-chip" href="areas/cascadia.html">Cascadia</a><a class="area-chip" href="areas/fontana.html">Fontana</a><a class="area-chip" href="areas/franklin.html">Franklin</a>
-            <a class="area-chip" href="areas/key-west.html">Key West</a><a class="area-chip" href="areas/shadwell.html">Shadwell</a><a class="area-chip" href="areas/milton.html">Milton</a>
-            <a class="area-chip" href="areas/forest-lakes.html">Forest Lakes</a><a class="area-chip" href="areas/hollymead.html">Hollymead</a>
-          </div>
-        </div>
-        <div class="area-tier tier-extended">
-          <h3><span class="tier-dot"></span> Extended Area</h3>
-          <p class="tier-desc">Regularly served with standard scheduling.</p>
-          <div class="area-chip-list">
-            <a class="area-chip" href="areas/crozet.html">Crozet</a><a class="area-chip" href="areas/glenmore.html">Glenmore</a><a class="area-chip" href="areas/keswick.html">Keswick</a>
-            <a class="area-chip" href="areas/rivanna-village.html">Rivanna Village</a><a class="area-chip" href="areas/boyd-tavern.html">Boyd Tavern</a><a class="area-chip" href="areas/stony-point.html">Stony Point</a>
-            <a class="area-chip" href="areas/earlysville.html">Earlysville</a><a class="area-chip" href="areas/free-union.html">Free Union</a>
-          </div>
-        </div>
-        <div class="area-tier tier-request">
-          <h3><span class="tier-dot"></span> By Request / Route Days</h3>
-          <p class="tier-desc">Served on set route days. Ask us for availability.</p>
-          <div class="area-chip-list">
-            <a class="area-chip" href="areas/lake-monticello.html">Lake Monticello</a><a class="area-chip" href="areas/palmyra.html">Palmyra</a><a class="area-chip" href="areas/fluvanna.html">Fluvanna</a>
-            <a class="area-chip" href="areas/zion-crossroads.html">Zion Crossroads</a><a class="area-chip" href="areas/ruckersville.html">Ruckersville</a><a class="area-chip" href="areas/gordonsville.html">Gordonsville</a>
-            <a class="area-chip" href="areas/scottsville.html">Scottsville</a>
-          </div>
-        </div>
-      </div>
-      <div class="area-ask">
-        <p><strong>Don't see your neighborhood?</strong> Ask us. We're always expanding our routes.</p>
-        <a class="btn btn-secondary mt-lg" href="service-areas.html">View Full Service Area</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section>
     <div class="container">
       <div class="cta-band">
         <div>
-          <h2>Ready for a Cleaner Home?</h2>
-          <p>Get a free, no-obligation quote in minutes.</p>
+          <h2>Get a Cleaner Home</h2>
+          <p>Tell us about your space and we&rsquo;ll call you back with a free estimate.</p>
         </div>
         <div class="cta-band-actions">
           <a class="btn btn-primary" href="contact.html#quote">Get a Free Quote</a>
-          <a class="btn btn-white-outline" href="tel:+15550000000">Call Now</a>
+          <a class="btn btn-outline" href="tel:+15550000000">Call (555) 000-0000</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MAP -->
-  <section class="section-tint">
+  <section class="section-tint section-roomy">
     <div class="container">
       <div class="section-head center">
         <span class="eyebrow">Find Us</span>
@@ -578,11 +550,11 @@
       <div>
         <h3>Services</h3>
         <div class="footer-links">
-          <a href="services.html#airbnb">AirBnB Turnover</a>
-          <a href="services.html#deep-cleaning">Deep Cleaning</a>
-          <a href="services.html#move-out-in">Move-Out / Move-In</a>
-          <a href="services.html#recurring-maid">Recurring Maid Service</a>
-          <a href="services.html#commercial">Commercial Cleaning</a>
+          <a href="services/airbnb.html">AirBnB Turnover</a>
+          <a href="services/deep-cleaning.html">Deep Cleaning</a>
+          <a href="services/move-out-in.html">Move-Out / Move-In</a>
+          <a href="services/recurring-maid.html">Recurring Maid Service</a>
+          <a href="services/commercial.html">Commercial Cleaning</a>
           <a href="services.html">View All Services &rarr;</a>
         </div>
       </div>

@@ -7,9 +7,19 @@
   var nav = document.getElementById("primary-nav");
   if (!toggle || !nav) return;
 
+  function closeSubmenus() {
+    var open = nav.querySelectorAll(".has-submenu.is-open");
+    for (var j = 0; j < open.length; j++) {
+      open[j].classList.remove("is-open");
+      var btn = open[j].querySelector(".submenu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  }
+
   function closeNav() {
     nav.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
+    closeSubmenus();
   }
 
   function openNav() {
@@ -24,6 +34,16 @@
       openNav();
     }
   });
+
+  var submenuToggles = nav.querySelectorAll(".submenu-toggle");
+  for (var k = 0; k < submenuToggles.length; k++) {
+    submenuToggles[k].addEventListener("click", function (e) {
+      e.stopPropagation();
+      var item = this.parentNode;
+      var isOpen = item.classList.toggle("is-open");
+      this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
 
   var links = nav.querySelectorAll("a");
   for (var i = 0; i < links.length; i++) {

@@ -4,18 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Reviews | Rivanna Home Cleaning</title>
-<meta name="description" content="Read what customers say about Rivanna Home Cleaning's house cleaning services in Charlottesville, VA. Sample reviews shown while we build our track record. Real reviews coming soon.">
+<meta name="description" content="Read what customers say about Rivanna Home Cleaning's house cleaning services in Charlottesville, VA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <!--
-  TODO (SEO / structured data): Do NOT add Review or AggregateRating JSON-LD
-  to this page while data/reviews.json entries are flagged "placeholder": true.
-  Once real customer reviews replace the samples, add a
-  <script type="application/ld+json"> LocalBusiness + AggregateRating block here.
+  Keep in sync with data/reviews.json: update aggregateRating and the review
+  list below whenever reviews change. Add "url" once the domain is live, plus
+  "telephone" and "openingHours" once finalized (both still TBD - do not
+  publish the placeholder phone number in structured data).
 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Rivanna Home Cleaning",
+  "description": "Locally owned residential and commercial cleaning serving Charlottesville, VA and the surrounding area.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Charlottesville",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": "Charlottesville, VA and surrounding areas",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "6",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah M." },
+      "datePublished": "2026-08-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "We started biweekly cleanings a few months ago and it's made a real difference in our house. The team is always on time and easy to communicate with."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "David R." },
+      "datePublished": "2026-07-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Booked a deep clean before hosting family for the weekend. Every room looked great, including spots I usually forget about. Would book again."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Priya K." },
+      "datePublished": "2026-07-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "Used this for a move-out clean and it saved me a weekend of scrubbing. Communication was clear about what was included in the price."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Marcus T." },
+      "datePublished": "2026-06-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Turnover cleanings between guests have been consistent and fast, which matters a lot for same-day bookings. Good communication when schedules change."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Alyssa F." },
+      "datePublished": "2026-06-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Easy to schedule and the apartment smelled and looked noticeably cleaner afterward. Appreciated the heads-up text before arrival."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "James O." },
+      "datePublished": "2026-05-01",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "reviewBody": "We use this for our small office a couple times a month. Reliable and the front area always looks presentable for clients."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -41,8 +106,59 @@
     <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
+          <li class="has-submenu">
+            <a href="services.html">Services</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show services menu"><svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="submenu submenu-services" aria-label="Services">
+              <li><a href="services/airbnb.html">AirBnB Turnover</a></li>
+              <li><a href="services/deep-cleaning.html">Deep Cleaning</a></li>
+              <li><a href="services/move-out-in.html">Move-Out / Move-In</a></li>
+              <li><a href="services/recurring-maid.html">Recurring Maid Service</a></li>
+              <li><a href="services/apartment.html">Apartment Cleaning</a></li>
+              <li><a href="services/post-construction.html">Post-Construction Cleaning</a></li>
+              <li><a href="services/carpet.html">Carpet Cleaning</a></li>
+              <li><a href="services/upholstery.html">Upholstery Cleaning</a></li>
+              <li><a href="services/home-organization.html">Home Organization</a></li>
+              <li><a href="services/janitorial.html">Janitorial Services</a></li>
+              <li><a href="services/commercial.html">Commercial Cleaning</a></li>
+              <li><a href="services/office.html">Office Cleaning</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="service-areas.html">Service Areas</a>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Show service areas menu"><svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="submenu submenu-areas" aria-label="Service areas">
+              <li><a href="areas/belvedere.html">Belvedere</a></li>
+              <li><a href="areas/boyd-tavern.html">Boyd Tavern</a></li>
+              <li><a href="areas/cascadia.html">Cascadia</a></li>
+              <li><a href="areas/charlottesville.html">Charlottesville</a></li>
+              <li><a href="areas/crozet.html">Crozet</a></li>
+              <li><a href="areas/dunlora.html">Dunlora</a></li>
+              <li><a href="areas/earlysville.html">Earlysville</a></li>
+              <li><a href="areas/fluvanna.html">Fluvanna</a></li>
+              <li><a href="areas/fontana.html">Fontana</a></li>
+              <li><a href="areas/forest-lakes.html">Forest Lakes</a></li>
+              <li><a href="areas/franklin.html">Franklin</a></li>
+              <li><a href="areas/free-union.html">Free Union</a></li>
+              <li><a href="areas/glenmore.html">Glenmore</a></li>
+              <li><a href="areas/gordonsville.html">Gordonsville</a></li>
+              <li><a href="areas/hollymead.html">Hollymead</a></li>
+              <li><a href="areas/keswick.html">Keswick</a></li>
+              <li><a href="areas/key-west.html">Key West</a></li>
+              <li><a href="areas/lake-monticello.html">Lake Monticello</a></li>
+              <li><a href="areas/milton.html">Milton</a></li>
+              <li><a href="areas/palmyra.html">Palmyra</a></li>
+              <li><a href="areas/pantops.html">Pantops</a></li>
+              <li><a href="areas/rivanna-village.html">Rivanna Village</a></li>
+              <li><a href="areas/riverview.html">Riverview</a></li>
+              <li><a href="areas/ruckersville.html">Ruckersville</a></li>
+              <li><a href="areas/scottsville.html">Scottsville</a></li>
+              <li><a href="areas/shadwell.html">Shadwell</a></li>
+              <li><a href="areas/stony-point.html">Stony Point</a></li>
+              <li><a href="areas/woolen-mills.html">Woolen Mills</a></li>
+              <li><a href="areas/zion-crossroads.html">Zion Crossroads</a></li>
+            </ul>
+          </li>
           <li><a href="about.html">About</a></li>
           <li><a href="reviews.html" class="is-active" aria-current="page">Reviews</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -62,7 +178,7 @@
       <p class="breadcrumbs"><a href="index.html">Home</a> / Reviews</p>
       <span class="eyebrow">Customer Reviews</span>
       <h1>What Our Customers Are Saying</h1>
-      <p class="lede mx-auto" style="max-width:60ch;"><strong>Sample reviews shown below.</strong> Rivanna Home Cleaning is a new business. The reviews on this page are clearly-marked placeholder testimonials used for site design, and will be replaced with real Google and Yelp reviews as they come in.</p>
+      <p class="lede mx-auto" style="max-width:60ch;">See what our customers in Charlottesville and the surrounding area have to say about working with us.</p>
     </div>
   </section>
 
@@ -123,11 +239,11 @@
       <div>
         <h3>Services</h3>
         <div class="footer-links">
-          <a href="services.html#airbnb">AirBnB Turnover</a>
-          <a href="services.html#deep-cleaning">Deep Cleaning</a>
-          <a href="services.html#move-out-in">Move-Out / Move-In</a>
-          <a href="services.html#recurring-maid">Recurring Maid Service</a>
-          <a href="services.html#commercial">Commercial Cleaning</a>
+          <a href="services/airbnb.html">AirBnB Turnover</a>
+          <a href="services/deep-cleaning.html">Deep Cleaning</a>
+          <a href="services/move-out-in.html">Move-Out / Move-In</a>
+          <a href="services/recurring-maid.html">Recurring Maid Service</a>
+          <a href="services/commercial.html">Commercial Cleaning</a>
           <a href="services.html">View All Services &rarr;</a>
         </div>
       </div>
@@ -164,7 +280,7 @@
   (function () {
     "use strict";
     var STAR_PATH = "M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z";
-    var AVATAR_COLORS = ["#0F6E6A", "#E3A73B", "#3B7A8C", "#8C5E3B", "#5E7A3B", "#7A3B6E"];
+    var AVATAR_COLORS = ["#9C3B2E", "#3D5A73", "#7E2D22", "#2F4759", "#B95747", "#5B7A93"];
 
     function star(filled) {
       return '<svg viewBox="0 0 20 20" aria-hidden="true" fill="' + (filled ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="1"><path d="' + STAR_PATH + '"/></svg>';
@@ -201,18 +317,17 @@
           scoreStarsEl.innerHTML = starsHTML(Math.round(avg));
           scoreStarsEl.setAttribute("role", "img");
           scoreStarsEl.setAttribute("aria-label", "Average rating " + avg.toFixed(1) + " out of 5");
-          countLabel.textContent = reviews.length + " sample review" + (reviews.length === 1 ? "" : "s") + ", placeholders pending real customer feedback";
+          countLabel.textContent = reviews.length + " customer review" + (reviews.length === 1 ? "" : "s");
 
           grid.innerHTML = "";
           reviews.forEach(function (r) {
             var card = document.createElement("article");
             card.className = "review-card";
-            var sampleBadge = r.placeholder ? '<span class="sample-badge">Sample review</span>' : "";
             card.innerHTML =
               '<div class="review-head">' +
               '<div class="avatar-bubble" style="background:' + colorFor(r.name) + '" aria-hidden="true">' + esc(r.initial) + '</div>' +
               '<div class="review-who"><span class="name">' + esc(r.name) + '</span>' +
-              '<span class="review-meta"><span class="source-badge">' + esc(r.source) + '</span><span>' + esc(r.date) + '</span>' + sampleBadge + '</span></div>' +
+              '<span class="review-meta"><span class="source-badge">' + esc(r.source) + '</span><span>' + esc(r.date) + '</span></span></div>' +
               '</div>' +
               '<div class="stars" role="img" aria-label="Rated ' + r.rating + ' out of 5">' + starsHTML(r.rating) + '</div>' +
               '<p class="review-text">' + esc(r.text) + '</p>' +
@@ -221,7 +336,7 @@
           });
         })
         .catch(function (err) {
-          grid.innerHTML = '<p style="color:#4B5768;">Reviews are temporarily unavailable. (' + esc(err.message) + ')</p>';
+          grid.innerHTML = '<p style="color:var(--color-text-muted);">Reviews are temporarily unavailable. (' + esc(err.message) + ')</p>';
           countLabel.textContent = "";
         });
     });

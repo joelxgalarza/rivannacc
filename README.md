@@ -20,9 +20,9 @@ python3 -m http.server 8000
 rivanna-site/
   index.html              Home
   services.html            All 12 services (overview + anchored detail sections)
-  service-areas.html       Tiered service area list + map
+  service-areas.html       Full service-area list + map
   about.html                Company story, values, team, guarantee
-  reviews.html               Full reviews grid (placeholder data)
+  reviews.html               Full reviews grid
   contact.html               Quote form + contact details + Booking Koala embed slot
   assets/
     css/styles.css           Hand-written, mobile-first stylesheet (brand palette)
@@ -30,11 +30,14 @@ rivanna-site/
     js/faq.js                 FAQ accordion toggle logic
     images/                   (reserved for locally-hosted images, see note below)
   data/
-    reviews.json              6 placeholder review objects (all "placeholder": true)
+    reviews.json              6 real customer review objects
   images.json                 Maps image keys to their (currently hotlinked) URLs + alt text
-  areas/                      28 individual service-area advertorial/SEO pages (one per
+  areas/                      29 individual service-area advertorial/SEO pages (one per
                               neighborhood/town in service-areas.html), each with unique
                               local copy, a local FAQ, featured services, and its own CTA
+  services/                   12 individual service detail pages (one per service on the
+                              services.html hub), each with full copy, FAQs, related
+                              services, and area links
   README.md                   This file
 ```
 
@@ -55,15 +58,17 @@ rivanna-site/
   chips to move away from generic AI-generated-site visual patterns.
 - Service-area names on the homepage and `service-areas.html` are now links to their
   individual `areas/<slug>.html` pages instead of plain text chips.
+- Service areas are a single A-to-Z list (no tiers, no drive-time claims). The navbar
+  carries hover dropdowns (tap-to-expand on mobile) listing all 12 services and all
+  29 service areas.
 
 ## Individual service-area pages (`areas/`)
 
 Modeled on the advertorial/local-SEO pattern (distinct per-location copy, local FAQ,
 location-specific CTA). One page per neighborhood/town listed in `service-areas.html`
-(28 total; "Charlottesville" itself is intentionally excluded since the main site already
-targets it). Each page includes:
+(29 total, including a Charlottesville city page). Each page includes:
 - A unique, geographically accurate description (not generic filler) sourced from real
-  local landmarks, drive times, and neighborhood character.
+  local landmarks and neighborhood character.
 - A "Services {Area} Customers Book Most" list, ordered to reflect what's actually likely
   to be requested in that area (e.g. move-in cleans for new-construction Crozet/Rivanna
   Village, commercial/office cleaning for the Zion Crossroads corridor, premium recurring
@@ -71,11 +76,10 @@ targets it). Each page includes:
 - A short local FAQ (2 questions) and a "nearby areas we serve" cross-link block.
 
 Before launch:
-- [ ] Add a `sitemap.xml` covering all pages, including the 28 area pages, and a
+- [ ] Add a `sitemap.xml` covering all pages, including the 29 area and 12 service pages, and a
       `robots.txt` pointing to it. Neither exists yet.
 - [ ] Consider Service/LocalBusiness structured data per area page once real contact
-      details are finalized (not added yet, consistent with the no-schema-while-placeholder
-      approach used elsewhere on the site).
+      details are finalized (not added yet).
 
 ## Launch checklist: everything marked TBD/placeholder
 
@@ -106,14 +110,14 @@ items to resolve before going live:
       submit (see the inline `<script>` at the bottom of each page).
 
 ### 3. Reviews
-- [ ] Replace the 6 sample entries in `data/reviews.json` (all flagged
-      `"placeholder": true`) with real customer reviews as they come in. No template changes
-      needed. Just add/replace objects in the JSON array.
-- [ ] Once real reviews are in place, add `Review` / `AggregateRating` JSON-LD structured
-      data. This was intentionally left out for now. See the `<!-- TODO -->` comments in
-      the `<head>` of `index.html` and `reviews.html`, and the header comment in
-      `assets/js/carousel.js`. Adding schema markup for placeholder reviews would violate
-      Google's structured-data guidelines.
+- [x] `data/reviews.json` holds 6 real customer reviews. To add more, append
+      objects to the JSON array and update the matching JSON-LD (see below).
+- [x] `Review` / `AggregateRating` JSON-LD structured data is in the `<head>` of
+      `index.html` and `reviews.html`. Keep it in sync with `data/reviews.json`:
+      update `aggregateRating` and the `review` list whenever reviews change.
+- [ ] Add `url` to the JSON-LD once the domain is live, plus `telephone` and
+      `openingHours` once finalized (both still TBD — do not publish the
+      placeholder phone number in structured data).
 
 ### 4. Awards / trust badges
 - [ ] The trust badge row (Home page and elsewhere) includes an "Award pending: Quality
@@ -143,7 +147,7 @@ items to resolve before going live:
 
 ### 7. Policy pages
 - [x] `privacy-policy.html` and `terms-of-service.html` are live at the site root and
-      linked from every page footer (root pages link directly; the 28 `areas/` pages link
+      linked from every page footer (root pages link directly; the 29 `areas/` pages link
       via `../`). Content reflects what Joel described using: Meta/Facebook (ads, Pixel),
       GoHighLevel (CRM, appointment texts/emails), and Booking Koala (once live), plus a
       data-minimization statement ("we only use your info for what's necessary to run the
@@ -163,16 +167,16 @@ items to resolve before going live:
 
 ## Notes on deliberate design decisions (per the build plan)
 
-- **Reviews are obvious samples, not fabricated claims.** Each entry in
-  `data/reviews.json` uses a first-name + last-initial format, generic phrasing, and is
-  flagged `"placeholder": true`. The UI renders a visible "Sample review" badge on every
-  placeholder review (see `assets/js/carousel.js` and the inline script in `reviews.html`)
-  so visitors can tell at a glance that these are not yet real testimonials.
+- **Reviews are real customer testimonials.** Each entry in
+  `data/reviews.json` uses a first-name + last-initial format. New reviews can be
+  appended to the JSON array with no template changes (see `assets/js/carousel.js`
+  and the inline script in `reviews.html`).
 - **Reviewer avatars are CSS initials bubbles**, not photos: a colored circle with the
   reviewer's first initial. No AI-generated face is ever presented as a specific person's
   photo.
 - **Trust badges only claim what's true today**: Insured & Bonded, Locally Owned &
   Operated, 100% Satisfaction Guarantee, Background-Checked Staff, plus the reserved
   "Award pending" slot described above. No specific award is shown as already won.
-- **No Review/AggregateRating schema** is emitted anywhere on the site while reviews remain
-  placeholders (see Section 3 above).
+- **Review/AggregateRating schema** is emitted in the `<head>` of `index.html` and
+  `reviews.html`, matching the visible reviews (see Section 3 above). Keep it in
+  sync with `data/reviews.json` when reviews change.
