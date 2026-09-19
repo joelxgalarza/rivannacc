@@ -110,8 +110,6 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .btn-secondary:hover { background: var(--color-ridge); filter: brightness(0.9); }
 .btn-outline { background: transparent; border-color: var(--color-action); color: var(--color-action); }
 .btn-outline:hover { background: var(--color-action); color: var(--color-surface); }
-.btn-white-outline { background: transparent; border-color: rgba(255,255,255,0.7); color: var(--color-surface); }
-.btn-white-outline:hover { background: var(--color-surface); color: var(--color-action); }
 .btn-sm { padding: 0.55rem 1.1rem; font-size: 0.98rem; }
 .btn-block { width: 100%; }
 .btn[disabled] { opacity: 0.6; cursor: not-allowed; }
