@@ -1,6 +1,8 @@
-# Rivanna Home Cleaning — Design System LOCK v1.0
+# Rivanna Home Cleaning — Design System LOCK v1.1
 
 **Status: PENDING APPROVAL.** Nothing below changes without a version bump.
+v1.1 (2026-09-21): rebranded to match `assets/images/rivanna-logo.svg` —
+deep teal / aqua replaces the v1.0 brick-red palette throughout.
 Once approved, every page (home, 12 service pages, 29 area pages, any future
 combos) is regenerated against this file. No page may introduce a color,
 typeface, spacing value, radius, shadow, or component treatment not defined
@@ -8,33 +10,34 @@ here. No page may re-decide these choices locally.
 
 ## 0. Where this system comes from
 
-The palette is pulled from Charlottesville itself (red brick, Blue Ridge
-slate, warm paper), the type pairs a sturdy slab display face with a plain
-readable body face, and the layout language is editorial (sharp edges,
-borders, hard offset shadows, asymmetric sections). Nothing here is chosen
-because it "reads as trustworthy" in the abstract.
+The palette is pulled from the brand mark itself (`assets/images/
+rivanna-logo.svg`: deep teal #184D59, aqua #9CCEC9, ice #F7FBFA), the type
+pairs a sturdy slab display face with a plain readable body face, and the
+layout language is editorial (sharp edges, borders, hard offset shadows,
+asymmetric sections). Nothing here is chosen because it "reads as
+trustworthy" in the abstract.
 
 ## 1. Color tokens (exact, functional names)
 
 ```css
 :root {
-  --color-action: #9C3B2E;        /* Charlottesville red brick: buttons, links, key headings accents */
-  --color-action-dark: #7E2D22;   /* hover / active states for action elements */
-  --color-text: #2A2622;          /* warm charcoal: body text, footer background */
-  --color-text-muted: #57504A;    /* secondary text on light surfaces only */
+  --color-action: #184D59;        /* logo deep teal: buttons, links, key headings accents */
+  --color-action-dark: #0F3641;   /* hover / active states for action elements */
+  --color-text: #1E2E33;          /* cool charcoal: body text, footer background */
+  --color-text-muted: #4E6267;    /* secondary text on light surfaces only */
   --color-surface: #FFFFFF;
-  --color-surface-alt: #F7F2EB;   /* warm paper: tint bands, callouts */
-  --color-border: #DED5C8;        /* warm light border */
-  --color-ridge: #3D5A73;         /* Blue Ridge slate: eyebrows + small-caps labels ONLY */
+  --color-surface-alt: #EDF4F3;   /* aqua tint: tint bands, callouts */
+  --color-border: #CBDCDC;        /* cool light border */
+  --color-ridge: #237080;         /* mid teal: eyebrows + small-caps labels ONLY */
   --color-feedback-success: #2E7D4F; /* form confirmations ONLY, never brand/decoration */
 }
 ```
 
-Contrast (white background): action ≈ 6.8:1, action-dark higher, text ≈ 14:1,
-muted ≈ 6:1, ridge ≈ 7:1. All pass 4.5:1 for text. Button text is always
+Contrast (white background): action ≈ 9.4:1, action-dark higher, text ≈ 14:1,
+muted ≈ 6.4:1, ridge ≈ 5.7:1. All pass 4.5:1 for text. Button text is always
 surface on action/action-dark.
 
-BANNED: teal/emerald/green-family primaries, amber/gold/orange accents,
+BANNED: brick-red/rust primaries, amber/gold/orange accents,
 purple/indigo gradients, pure black `#000`, and any hex/rgb appearing
 outside these tokens. Inline `style=""` may set layout (widths) only,
 never color.
@@ -78,7 +81,7 @@ No two adjacent sections share identical padding.
 - `--shadow-hard-accent: 6px 6px 0 var(--color-action)` (rare: hero
   feature card and final CTA band only).
 - Overlays (nav dropdown, sticky mobile bar): one small soft shadow
-  `0 12px 28px rgba(42,38,34,.14)` — functional exception, documented here.
+  `0 12px 28px rgba(30,46,51,.14)` — functional exception, documented here.
 - Reviewer avatar initials stay circular (identity, not decoration) —
   explicit exception.
 
@@ -166,7 +169,7 @@ variants can be built as live pages inside Pass 4 if approved.
 
 ## 10. Decisions locked at approval
 
-Approving this file locks: the brick/ridge/paper palette; Bitter +
-Public Sans; the 7 section patterns; the trust-once rule with its
+Approving this file locks: the teal/aqua palette (matched to the logo);
+Bitter + Public Sans; the 7 section patterns; the trust-once rule with its
 single FAQ exception; the business-rule overrides in Section 7; and
 the regen scope in Section 9.

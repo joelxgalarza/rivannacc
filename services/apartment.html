@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBSPZ29X2X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GBSPZ29X2X');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1357863269567859');
+fbq('track', 'PageView');
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  var t = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+  if (t && typeof fbq === 'function') { fbq('track', 'Contact'); }
+});
+</script>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apartment Cleaning for Studios to Three Bedrooms | Rivanna</title>
@@ -9,9 +38,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/images/rivanna-logo.svg" type="image/svg+xml">
+<meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
+/></noscript>
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="top-bar">
@@ -26,7 +60,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="../index.html" class="logo">Rivanna <span>Home Cleaning</span></a>
+    <a href="../index.html" class="logo"><img src="../assets/images/rivanna-logo.svg" alt="" width="71" height="54"><span class="logo-words">Rivanna <span>Home Cleaning</span></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
       <span class="bar"></span>
     </button>
@@ -248,7 +282,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="../index.html" class="logo">Rivanna <span>Home Cleaning</span></a>
+        <a href="../index.html" class="logo"><img src="../assets/images/rivanna-logo.svg" alt="" width="71" height="54"><span class="logo-words">Rivanna <span>Home Cleaning</span></span></a>
         <p>Locally owned residential &amp; commercial cleaning serving Charlottesville, VA and the surrounding area.</p>
       </div>
       <div>

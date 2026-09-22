@@ -34,7 +34,7 @@
     return out;
   }
 
-  var AVATAR_COLORS = ["#9C3B2E", "#3D5A73", "#7E2D22", "#2F4759", "#B95747", "#5B7A93"];
+  var AVATAR_COLORS = ["#184D59", "#237080", "#0F3641", "#1B5A68", "#2E7A8B", "#14505C"];
 
   function colorForName(name) {
     var sum = 0;

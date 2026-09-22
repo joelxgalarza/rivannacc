@@ -1,20 +1,21 @@
 /* =========================================================================
    Rivanna Home Cleaning: hand-written, mobile-first stylesheet
-   Palette: brick action #9C3B2E / warm paper #F7F2EB / ridge slate #3D5A73 /
-            warm charcoal #2A2622 / success green #2E7D4F (forms only)
+   Palette: deep teal #184D59 / aqua tint #EDF4F3 / mid teal #237080 /
+            cool charcoal #1E2E33 / success green #2E7D4F (forms only)
+            (matched to assets/images/rivanna-logo.svg)
    Type: Bitter (headlines, a sturdy slab serif that reads local, not template) + Public Sans (body,
             a large-x-height, high-legibility sans built for readability at every age)
    ========================================================================= */
 
 :root {
-  --color-action: #9C3B2E;
-  --color-action-dark: #7E2D22;
-  --color-text: #2A2622;
-  --color-text-muted: #57504A;
+  --color-action: #184D59;
+  --color-action-dark: #0F3641;
+  --color-text: #1E2E33;
+  --color-text-muted: #4E6267;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #F7F2EB;
-  --color-border: #DED5C8;
-  --color-ridge: #3D5A73;
+  --color-surface-alt: #EDF4F3;
+  --color-border: #CBDCDC;
+  --color-ridge: #237080;
   --color-feedback-success: #2E7D4F;
   --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Bitter", Georgia, "Times New Roman", serif;
@@ -22,7 +23,7 @@
   --radius-none: 0;
   --shadow-hard: 6px 6px 0 var(--color-border);
   --shadow-hard-accent: 6px 6px 0 var(--color-action);
-  --shadow-soft: 0 12px 28px rgba(42, 38, 34, 0.14);
+  --shadow-soft: 0 12px 28px rgba(30, 46, 51, 0.14);
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.75rem;
@@ -135,12 +136,14 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   border-bottom: 1px solid var(--color-border);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.85rem; }
-.logo { display: flex; flex-direction: column; line-height: 1.05; font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; color: var(--color-action); }
-.logo span { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-muted); }
+.logo { display: flex; align-items: center; gap: 0.65rem; line-height: 1.05; color: var(--color-action); }
 .logo:hover { text-decoration: none; }
+.logo img { height: 54px; width: auto; flex: none; }
+.logo-words { display: flex; flex-direction: column; font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; color: inherit; }
+.logo-words > span { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-muted); }
 
 .site-nav { display: flex; align-items: center; gap: 1.25rem; }
-.site-nav ul { display: flex; gap: 1rem; flex-wrap: wrap; }
+.site-nav ul { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 .site-nav a:not(.btn) {
   color: var(--color-text); font-weight: 600; padding: 0.35rem 0.1rem; border-bottom: 2px solid transparent;
 }
@@ -175,7 +178,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
     padding-top: 1rem; gap: 1.25rem; order: 3;
   }
   .site-nav.is-open { display: flex; }
-  .site-nav ul { flex-direction: column; gap: 0.9rem; }
+  .site-nav ul { flex-direction: column; gap: 0.9rem; align-items: stretch; }
   .nav-cta { flex-direction: column; align-items: stretch; }
   .nav-cta .btn { width: 100%; }
 }
@@ -216,7 +219,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .mobile-cta-bar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 150; display: none;
   background: var(--color-surface); border-top: 1px solid var(--color-border);
-  box-shadow: 0 -4px 16px rgba(42, 38, 34, 0.12); padding: 0.6rem 0.9rem;
+  box-shadow: 0 -4px 16px rgba(30, 46, 51, 0.12); padding: 0.6rem 0.9rem;
   gap: 0.6rem;
 }
 @media (max-width: 640px) {
@@ -555,7 +558,9 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 @media (min-width: 720px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1fr 1.3fr; } }
 .site-footer h3 { color: var(--color-surface); font-size: 1.12rem; margin-bottom: 1rem; font-family: var(--font-body); font-weight: 700; }
 .site-footer .logo { color: var(--color-surface); }
-.site-footer .logo span { color: var(--color-surface-alt); }
+.site-footer .logo-words > span { color: var(--color-surface-alt); }
+/* Dark footer: seat the mark on a light tile so both teal halves stay legible */
+.site-footer .logo img { height: 48px; background: var(--color-surface-alt); border-radius: 10px; padding: 6px; }
 .site-footer p { color: var(--color-surface-alt); font-size: 1rem; }
 .footer-links { display: grid; gap: 0.6rem; }
 .footer-links a { color: var(--color-surface-alt); font-size: 1rem; }
