@@ -194,57 +194,10 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
           <h2>Job Application</h2>
           <p class="lede" style="margin-bottom:1.25rem;">Tell us about yourself, your experience, and your availability. We review every application.</p>
 
-          <form id="careers-apply-form" novalidate>
-            <div class="form-grid two-col">
-              <div class="field">
-                <label for="j-name">Name <span class="req">*</span></label>
-                <input type="text" id="j-name" name="name" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="j-phone">Phone <span class="req">*</span></label>
-                <input type="tel" id="j-phone" name="phone" autocomplete="tel" required>
-              </div>
-            </div>
-            <div class="form-grid two-col" style="margin-top:1rem;">
-              <div class="field">
-                <label for="j-email">Email <span class="req">*</span></label>
-                <input type="email" id="j-email" name="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="j-zip">ZIP Code <span class="req">*</span></label>
-                <input type="text" id="j-zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
-              </div>
-            </div>
-            <div class="form-grid two-col" style="margin-top:1rem;">
-              <div class="field">
-                <label for="j-position">Position</label>
-                <select id="j-position" name="position">
-                  <option value="">Select a position&hellip;</option>
-                  <option>Professional House Cleaner</option>
-                  <option>Deep Cleaning Specialist</option>
-                  <option>Move-Out Crew Cleaner</option>
-                  <option>Team Lead</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="j-experience">Cleaning Experience</label>
-                <select id="j-experience" name="experience">
-                  <option value="">Select your experience&hellip;</option>
-                  <option>New to professional cleaning</option>
-                  <option>Some professional cleaning work</option>
-                  <option>A lot of professional cleaning work</option>
-                </select>
-              </div>
-            </div>
-            <div class="field" style="margin-top:1rem;">
-              <label for="j-message">Message</label>
-              <textarea id="j-message" name="message" placeholder="Tell us about your cleaning experience, availability, and anything else we should know."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">Submit Application</button>
-            <p class="form-note">By submitting, you agree to be contacted about your application. We review every application.</p>
-            <p class="form-status" id="careers-apply-status" hidden>Thanks! We received your application and will follow up soon.</p>
-          </form>
+          <div class="quote-cta">
+            <p class="lede" style="margin-bottom:1.25rem;">Click the chat bubble in the corner to tell us about your experience and availability, or call us directly using the details to the right.</p>
+            <a class="btn btn-primary btn-block" href="tel:+17578800351">Call (757) 880-0351</a>
+          </div>
 
         </div>
 
@@ -252,7 +205,7 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
           <span class="eyebrow">How to Apply</span>
           <h2>Three Simple Steps</h2>
           <ol class="num-list">
-            <li><div><strong>Fill out the form</strong><span>Add your contact details, position, and experience.</span></div></li>
+            <li><div><strong>Message us</strong><span>Tell us your position and experience through chat or a call.</span></div></li>
             <li><div><strong>Hear back from us</strong><span>We review every application and follow up by phone or email.</span></div></li>
             <li><div><strong>Meet the team</strong><span>Qualified applicants meet for an interview and a paid trial clean.</span></div></li>
           </ol>
@@ -294,7 +247,7 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
       <div class="cta-band">
         <div>
           <h2>Ready to Apply?</h2>
-          <p>Fill out the form above and we will be in touch.</p>
+          <p>Chat with us or give us a call and we will be in touch.</p>
         </div>
         <div class="cta-band-actions">
           <a class="btn btn-primary" href="#apply">Apply Now</a>
@@ -360,18 +313,6 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
   <a class="btn btn-secondary" href="tel:+17578800351">Call</a>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("careers-apply-form");
-    var status = document.getElementById("careers-apply-status");
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (status) status.hidden = false;
-      });
-    }
-  });
-</script>
 <script src="assets/js/nav.js"></script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ab3231e08a179ce38105cd3" data-source="WEB_USER"></script>
 </body>

@@ -153,60 +153,10 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
           <h2>Request a Quote</h2>
           <p class="lede" style="margin-bottom:1.25rem;">Tell us about your space and preferred schedule and we'll follow up with pricing and availability.</p>
 
-          <form id="contact-quote-form" novalidate>
-            <div class="form-grid two-col">
-              <div class="field">
-                <label for="c-name">Name <span class="req">*</span></label>
-                <input type="text" id="c-name" name="name" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="c-phone">Phone <span class="req">*</span></label>
-                <input type="tel" id="c-phone" name="phone" autocomplete="tel" required>
-              </div>
-            </div>
-            <div class="form-grid two-col" style="margin-top:1rem;">
-              <div class="field">
-                <label for="c-email">Email <span class="req">*</span></label>
-                <input type="email" id="c-email" name="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="c-service">Service</label>
-                <select id="c-service" name="service">
-                  <option value="">Select a service&hellip;</option>
-                  <option>AirBnB / Short-Term Rental Turnover Cleaning</option>
-                  <option>Deep Cleaning</option>
-                  <option>Move-Out / Move-In Cleaning</option>
-                  <option>Recurring Maid Service</option>
-                  <option>Apartment Cleaning</option>
-                  <option>Post-Construction Cleaning</option>
-                  <option>Carpet Cleaning</option>
-                  <option>Upholstery Cleaning</option>
-                  <option>Home Organization</option>
-                  <option>Janitorial Services</option>
-                  <option>Commercial Cleaning</option>
-                  <option>Office Cleaning</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-grid two-col" style="margin-top:1rem;">
-              <div class="field">
-                <label for="c-address">Address or Neighborhood</label>
-                <input type="text" id="c-address" name="address" placeholder="e.g. Pantops, Crozet, Lake Monticello...">
-              </div>
-              <div class="field">
-                <label for="c-zip">ZIP Code <span class="req">*</span></label>
-                <input type="text" id="c-zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
-              </div>
-            </div>
-            <div class="field" style="margin-top:1rem;">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" placeholder="Number of bedrooms/bathrooms, preferred dates, anything else we should know."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block" style="margin-top:1.25rem;">Request My Free Quote</button>
-            <p class="form-note">By submitting, you agree to be contacted about your quote. We will follow up by phone shortly.</p>
-            <p class="form-status" id="contact-quote-status" hidden>Thanks! We received your request and will call you back with your quote.</p>
-          </form>
+          <div class="quote-cta">
+            <p class="lede" style="margin-bottom:1.25rem;">Click the chat bubble in the corner to tell us about your space and preferred schedule, or call us directly using the details to the right.</p>
+            <a class="btn btn-primary btn-block" href="tel:+17578800351">Call (757) 880-0351</a>
+          </div>
 
         </div>
 
@@ -318,18 +268,6 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
   <a class="btn btn-secondary" href="tel:+17578800351">Call</a>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("contact-quote-form");
-    var status = document.getElementById("contact-quote-status");
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (status) status.hidden = false;
-      });
-    }
-  });
-</script>
 <script src="assets/js/nav.js"></script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ab3231e08a179ce38105cd3" data-source="WEB_USER"></script>
 </body>
