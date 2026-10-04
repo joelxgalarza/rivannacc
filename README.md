@@ -174,9 +174,11 @@ items to resolve before going live:
 - **Reviewer avatars are CSS initials bubbles**, not photos: a colored circle with the
   reviewer's first initial. No AI-generated face is ever presented as a specific person's
   photo.
-- **Trust badges only claim what's true today**: Insured & Bonded, Locally Owned &
-  Operated, 100% Satisfaction Guarantee, Background-Checked Staff, plus the reserved
-  "Award pending" slot described above. No specific award is shown as already won.
+- **Trust badges only claim what's true today**: Locally Owned & Operated, 100%
+  Satisfaction Guarantee, Background-Checked Staff, plus the reserved "Award pending"
+  slot described above. No specific award is shown as already won. Insured & Bonded
+  was removed on 2026-10-04 because coverage is not in place yet. Do not add it back
+  until the policy and bond are active.
 - **Review/AggregateRating schema** is emitted in the `<head>` of `index.html` and
   `reviews.html`, matching the visible reviews (see Section 3 above). Keep it in
   sync with `data/reviews.json` when reviews change.

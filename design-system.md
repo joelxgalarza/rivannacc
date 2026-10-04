@@ -116,9 +116,10 @@ P5, P7 qualify).
 ## 7. Trust claims and copy (hard rules)
 
 Each trust claim is stated EXACTLY ONCE per page, in the trust strip,
-strongest form: Locally owned and operated / Insured and bonded /
-Background-checked cleaners / Free re-clean reported within 24 hours.
-Body, FAQ, and CTA copy must not restate any of the four — with one
+strongest form: Locally owned and operated / Background-checked
+cleaners / Free re-clean reported within 24 hours. (Insured and bonded
+was removed 2026-10-04 until coverage is active. Do not claim it.)
+Body, FAQ, and CTA copy must not restate any of the three — with one
 deliberate exception: the "what if something's missed" FAQ answer states
 the remedy, because there it IS the answer, not repetition.
 
@@ -129,8 +130,8 @@ the live Terms page) — NEVER a "flat quote in 60 minutes" or any
 response-time promise. Pricing numbers, percentages, multipliers, and
 offer terms stay internal and are NEVER published. Allowed specifics:
 the 24-hour re-clean remedy, first visit runs deeper, regular visits
-cost less per clean (qualitative only), background-checked / insured /
-bonded status, and the verifiable counts (12 services, 29 areas).
+cost less per clean (qualitative only), background-checked status
+(insured/bonded only once coverage is active), and the verifiable counts (12 services, 29 areas).
 
 BANNED claims: years in business, customer counts, review counts or
 ratings, awards not earned, owner-attribution claims, any SLA. BANNED
