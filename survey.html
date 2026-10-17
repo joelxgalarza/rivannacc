@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How was your clean? | Rivanna Home Cleaning</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://rivannahomecleaning.com/survey">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="180x180" href="assets/images/favicon-180x180.png">
+<link rel="icon" href="assets/images/rivanna-logo.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+<meta name="theme-color" content="#184D59">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!--
+  Page-scoped layout only. Like review.html, this is a standalone page (no nav,
+  no footer links, unlinked and noindex), so its handful of rules live here
+  instead of bloating the shared stylesheet. Tokens only: no new colors.
+-->
+<style>
+  .survey-header { border-bottom: 1px solid var(--color-border); padding-block: 1rem; }
+  .survey-main { padding-block: clamp(2rem, 7vw, 3.25rem); }
+  .survey-wrap { max-width: 34rem; }
+  .survey-wrap h1 { margin-bottom: 0.5em; }
+  .survey-lede { margin-bottom: 0.75rem; }
+  .survey-sign { font-weight: 700; margin-bottom: 1.75rem; }
+
+  /* Card treatment matches the private feedback panel on review.html. */
+  .survey-card {
+    padding: 1.5rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: 4px solid var(--color-action);
+    box-shadow: var(--shadow-hard);
+  }
+  .survey-card[hidden] { display: none; }
+
+  /* Questions are generously spaced so nothing is mis-tapped on a phone. */
+  .survey-q { margin: 0; padding: 0; border: 0; }
+  .survey-q + .survey-q { margin-top: 1.75rem; }
+  .survey-q > legend,
+  .survey-q > .field > label {
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .survey-q .field { gap: 0.5rem; }
+  .survey-q .field input,
+  .survey-q .field textarea { padding: 0.85rem; font-size: 1.05rem; }
+  .survey-q .field textarea { min-height: 110px; }
+  .survey-hint { font-size: 0.98rem; color: var(--color-text-muted); margin: 0 0 0.6rem; }
+
+  /* Inline validation. Weight and wording carry the message, never color alone. */
+  .field-error { font-weight: 700; font-size: 0.98rem; color: var(--color-action-dark); margin: 0.5rem 0 0; }
+  .field-error[hidden] { display: none; }
+  .survey-q [aria-invalid="true"] { border-width: 2px; border-color: var(--color-action-dark); }
+
+  /* Rating: five large tappable buttons (real radios, styled labels). */
+  .rating-scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.45rem; }
+  .rating-scale input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .rating-scale label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--color-action);
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+  .rating-scale input:checked + label {
+    background: var(--color-action);
+    border-color: var(--color-action);
+    color: var(--color-surface);
+  }
+  .rating-scale input:focus-visible + label { outline: 3px solid var(--color-action-dark); outline-offset: 2px; }
+  .rating-ends {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+  .rating-ends span:last-child { text-align: right; }
+
+  /* Single-choice answers: stacked full-width buttons, two across once there is room. */
+  .choice-list { display: grid; gap: 0.5rem; }
+  .choice-list input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .choice-list label {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-action);
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+  .choice-list input:checked + label {
+    background: var(--color-action);
+    border-color: var(--color-action);
+    color: var(--color-surface);
+  }
+  .choice-list input:focus-visible + label { outline: 3px solid var(--color-action-dark); outline-offset: 2px; }
+
+  /* Oversized for thumbs, same as the review page CTA. */
+  .survey-cta {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding-block: 1.15rem;
+    font-size: 1.2rem;
+    min-height: 60px;
+  }
+  .survey-submit-row { margin-top: 1.75rem; }
+  .survey-cta-note { font-size: 1rem; color: var(--color-text-muted); margin-top: 0.75rem; }
+
+  /* Honeypot: off screen for people, visible to bots that fill every input. */
+  .survey-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .survey-thanks[hidden], .survey-error[hidden] { display: none; }
+  .survey-thanks h2, .survey-error h2 { font-size: 1.35rem; }
+  .survey-error { margin-top: 1rem; }
+  .survey-error .survey-cta { margin-top: 0.5rem; }
+
+  .survey-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface-alt);
+    padding-block: 1.75rem;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+  }
+  .survey-footer p { margin: 0 0 0.35rem; }
+  .survey-footer a { font-weight: 700; }
+
+  @media (min-width: 520px) {
+    .choice-list { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="survey-header">
+  <div class="container">
+    <a href="/" class="logo"><img src="assets/images/rivanna-logo.svg" alt="" width="71" height="54"><span class="logo-words">Rivanna <span>Home Cleaning</span></span></a>
+  </div>
+</header>
+
+<main class="survey-main" id="main">
+  <div class="container survey-wrap">
+    <h1 id="greeting">How was your clean?</h1>
+    <p class="lede survey-lede">Thank you for having us in your home. Seven quick questions, under a minute, and it comes straight to me.</p>
+    <p class="survey-sign">Diane, Rivanna Home Cleaning</p>
+
+    <div class="survey-card" id="survey-card">
+      <form id="survey-form" novalidate>
+        <fieldset class="survey-q">
+          <legend>Your name <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <div class="field">
+            <label for="survey-name" class="visually-hidden">Your name</label>
+            <input type="text" id="survey-name" name="name" autocomplete="name" autocapitalize="words" aria-required="true" aria-describedby="name-error">
+          </div>
+          <p class="field-error" id="name-error" role="alert" hidden>Please add your name so I know who to thank.</p>
+        </fieldset>
+
+        <fieldset class="survey-q">
+          <legend>Your phone number <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <p class="survey-hint" id="phone-hint">So I can reach you if anything needs fixing.</p>
+          <div class="field">
+            <label for="survey-phone" class="visually-hidden">Your phone number</label>
+            <input type="tel" id="survey-phone" name="phone" autocomplete="tel" inputmode="tel" aria-required="true" aria-describedby="phone-hint phone-error">
+          </div>
+          <p class="field-error" id="phone-error" role="alert" hidden>Please add a phone number where I can reach you.</p>
+        </fieldset>
+
+        <fieldset class="survey-q" id="rating-group">
+          <legend>Overall, how was your clean? <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <div class="rating-scale">
+            <input type="radio" id="rating-1" name="rating" value="1">
+            <label for="rating-1">1<span class="visually-hidden"> out of 5, not what you hoped</span></label>
+            <input type="radio" id="rating-2" name="rating" value="2">
+            <label for="rating-2">2<span class="visually-hidden"> out of 5</span></label>
+            <input type="radio" id="rating-3" name="rating" value="3">
+            <label for="rating-3">3<span class="visually-hidden"> out of 5</span></label>
+            <input type="radio" id="rating-4" name="rating" value="4">
+            <label for="rating-4">4<span class="visually-hidden"> out of 5</span></label>
+            <input type="radio" id="rating-5" name="rating" value="5">
+            <label for="rating-5">5<span class="visually-hidden"> out of 5, loved it</span></label>
+          </div>
+          <p class="rating-ends" aria-hidden="true"><span>1 = Not what you hoped</span><span>5 = Loved it</span></p>
+          <p class="field-error" id="rating-error" role="alert" hidden>Please tap a number from 1 to 5.</p>
+        </fieldset>
+
+        <fieldset class="survey-q">
+          <legend>What did we do especially well?</legend>
+          <p class="survey-hint" id="did-well-hint">Optional. If someone did a great job, I like to tell them.</p>
+          <div class="field">
+            <label for="survey-did-well" class="visually-hidden">What did we do especially well?</label>
+            <textarea id="survey-did-well" name="did_well" rows="3" aria-describedby="did-well-hint"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-q">
+          <legend>Anything we missed or could do better?</legend>
+          <p class="survey-hint" id="could-improve-hint">Optional. I read every one of these myself.</p>
+          <div class="field">
+            <label for="survey-could-improve" class="visually-hidden">Anything we missed or could do better?</label>
+            <textarea id="survey-could-improve" name="could_improve" rows="3" aria-describedby="could-improve-hint"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-q">
+          <legend>Which cleaner came?</legend>
+          <p class="survey-hint" id="cleaner-hint">Optional. A first name is plenty.</p>
+          <div class="field">
+            <label for="survey-cleaner" class="visually-hidden">Which cleaner came?</label>
+            <input type="text" id="survey-cleaner" name="cleaner" autocapitalize="words" aria-describedby="cleaner-hint">
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-q" id="book-again-group">
+          <legend>How likely are you to book with us again? <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <div class="choice-list">
+            <input type="radio" id="book-again-definitely" name="book_again" value="Definitely">
+            <label for="book-again-definitely">Definitely</label>
+            <input type="radio" id="book-again-probably" name="book_again" value="Probably">
+            <label for="book-again-probably">Probably</label>
+            <input type="radio" id="book-again-not-sure" name="book_again" value="Not sure">
+            <label for="book-again-not-sure">Not sure</label>
+            <input type="radio" id="book-again-no" name="book_again" value="No">
+            <label for="book-again-no">No</label>
+          </div>
+          <p class="field-error" id="book-again-error" role="alert" hidden>Please pick one so I know where we stand.</p>
+        </fieldset>
+
+        <fieldset class="survey-q" id="recurring-group">
+          <legend>Would you like to set up recurring cleanings? <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <div class="choice-list">
+            <input type="radio" id="recurring-weekly" name="recurring" value="Weekly">
+            <label for="recurring-weekly">Weekly</label>
+            <input type="radio" id="recurring-biweekly" name="recurring" value="Every 2 weeks">
+            <label for="recurring-biweekly">Every 2 weeks</label>
+            <input type="radio" id="recurring-monthly" name="recurring" value="Monthly">
+            <label for="recurring-monthly">Monthly</label>
+            <input type="radio" id="recurring-none" name="recurring" value="Not right now">
+            <label for="recurring-none">Not right now</label>
+          </div>
+          <p class="field-error" id="recurring-error" role="alert" hidden>Please pick one. &ldquo;Not right now&rdquo; is a fine answer.</p>
+        </fieldset>
+
+        <div class="survey-hp" aria-hidden="true">
+          <label for="survey-website">Website</label>
+          <input type="text" id="survey-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="survey-submit-row">
+          <button class="btn btn-primary survey-cta" type="submit" id="survey-submit">Send my feedback</button>
+          <p class="survey-cta-note">We&rsquo;ll only use this to follow up on your clean.</p>
+        </div>
+      </form>
+
+      <div class="survey-error" id="survey-error" role="alert" hidden>
+        <h2>That didn&rsquo;t go through</h2>
+        <p>Sorry about that. Please try again, or just reach me directly and I&rsquo;ll take it down myself.</p>
+        <button class="btn btn-primary survey-cta" type="button" id="survey-retry">Try again</button>
+        <p class="survey-cta-note">Or text <a href="tel:+14342056384">(434) 205-6384</a> or email <a href="mailto:book@rivannahomecleaning.com">book@rivannahomecleaning.com</a>.</p>
+      </div>
+    </div>
+
+    <!--
+      One thank-you screen for everyone, whatever the score. The Google review
+      button is shown to every person who finishes: no gating on rating.
+    -->
+    <div class="survey-card survey-thanks" id="survey-thanks" hidden>
+      <h2 id="thanks-heading" tabindex="-1">Thank you, that really helps</h2>
+      <p>I read every survey myself, and if anything needs fixing I&rsquo;ll be in touch. Thank you for supporting a small local business.</p>
+      <p class="survey-sign">Diane, Rivanna Home Cleaning</p>
+      <a class="btn btn-primary survey-cta" href="https://rivannahomecleaning.com/review" target="_blank" rel="noopener">Leave a Google review</a>
+      <p class="survey-cta-note">Opens in a new tab. A sentence or two is plenty.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="survey-footer">
+  <div class="container">
+    <p>Questions? Call or text <a href="tel:+14342056384">(434) 205-6384</a>.</p>
+    <p>&copy; 2026 Rivanna Home Cleaning &middot; Charlottesville, VA</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const ENDPOINT = "/api/survey";
+  const SOURCE = "rivanna-survey";
+
+  const form = document.getElementById("survey-form");
+  const card = document.getElementById("survey-card");
+  const thanks = document.getElementById("survey-thanks");
+  const errorPanel = document.getElementById("survey-error");
+  const retry = document.getElementById("survey-retry");
+  const submit = document.getElementById("survey-submit");
+
+  const nameField = document.getElementById("survey-name");
+  const phoneField = document.getElementById("survey-phone");
+
+  if (!form) return;
+
+  // --- Prefill from ?name= and ?phone= ------------------------------------
+  // Same name cleaning as review.html: letters (incl. accented), spaces,
+  // hyphens and apostrophes only, 40 chars max, then title cased because the
+  // CRM sends names in any case.
+  function cleanName(raw) {
+    if (!raw) return "";
+    const stripped = raw
+      .replace(/[^A-Za-zÀ-ɏЀ-ӿ \-'’]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 40)
+      .trim();
+    return stripped.replace(/(^|[\s\-'’])([a-zà-ɏ])/g, function (m, before, letter) {
+      return before + letter.toUpperCase();
+    });
+  }
+
+  // Keep only what can appear in a dialable number, 24 chars max.
+  function cleanPhone(raw) {
+    if (!raw) return "";
+    return raw.replace(/[^0-9+()\-. ]/g, "").replace(/\s+/g, " ").trim().slice(0, 24);
+  }
+
+  let params;
+  try {
+    params = new URLSearchParams(window.location.search);
+  } catch (e) {
+    params = new URLSearchParams("");
+  }
+
+  const prefillName = cleanName(params.get("name"));
+  const prefillPhone = cleanPhone(params.get("phone"));
+
+  if (prefillName && nameField) nameField.value = prefillName;
+  if (prefillPhone && phoneField) phoneField.value = prefillPhone;
+
+  if (prefillName) {
+    const heading = document.getElementById("greeting");
+    if (heading) heading.textContent = "Thanks, " + prefillName + "! How was your clean?";
+  }
+
+  // --- Validation ----------------------------------------------------------
+  function value(id) {
+    const el = document.getElementById(id);
+    return el ? el.value.trim() : "";
+  }
+
+  function checkedValue(name) {
+    const el = form.querySelector("input[name=\"" + name + "\"]:checked");
+    return el ? el.value : "";
+  }
+
+  function showError(errorId, invalidEl) {
+    const message = document.getElementById(errorId);
+    if (message) message.hidden = false;
+    if (invalidEl) invalidEl.setAttribute("aria-invalid", "true");
+  }
+
+  function clearError(errorId, invalidEl) {
+    const message = document.getElementById(errorId);
+    if (message) message.hidden = true;
+    if (invalidEl) invalidEl.removeAttribute("aria-invalid");
+  }
+
+  // A phone number is good enough if it carries at least 10 digits.
+  function hasEnoughDigits(raw) {
+    return (raw.replace(/\D/g, "") || "").length >= 10;
+  }
+
+  function validate() {
+    let firstInvalid = null;
+
+    if (!value("survey-name")) {
+      showError("name-error", nameField);
+      firstInvalid = firstInvalid || nameField;
+    } else {
+      clearError("name-error", nameField);
+    }
+
+    const phone = value("survey-phone");
+    const phoneMessage = document.getElementById("phone-error");
+    if (!phone || !hasEnoughDigits(phone)) {
+      if (phoneMessage) {
+        phoneMessage.textContent = phone
+          ? "That number looks short. Please check it and try again."
+          : "Please add a phone number where I can reach you.";
+      }
+      showError("phone-error", phoneField);
+      firstInvalid = firstInvalid || phoneField;
+    } else {
+      clearError("phone-error", phoneField);
+    }
+
+    if (!checkedValue("rating")) {
+      showError("rating-error", null);
+      firstInvalid = firstInvalid || document.getElementById("rating-1");
+    } else {
+      clearError("rating-error", null);
+    }
+
+    if (!checkedValue("book_again")) {
+      showError("book-again-error", null);
+      firstInvalid = firstInvalid || document.getElementById("book-again-definitely");
+    } else {
+      clearError("book-again-error", null);
+    }
+
+    if (!checkedValue("recurring")) {
+      showError("recurring-error", null);
+      firstInvalid = firstInvalid || document.getElementById("recurring-weekly");
+    } else {
+      clearError("recurring-error", null);
+    }
+
+    return firstInvalid;
+  }
+
+  // Clear a field's error as soon as the person fixes it.
+  [nameField, phoneField].forEach(function (field) {
+    if (!field) return;
+    field.addEventListener("input", function () {
+      if (field.getAttribute("aria-invalid") === "true" && field.value.trim()) {
+        clearError(field === nameField ? "name-error" : "phone-error", field);
+      }
+    });
+  });
+
+  [["rating", "rating-error"], ["book_again", "book-again-error"], ["recurring", "recurring-error"]]
+    .forEach(function (pair) {
+      form.querySelectorAll("input[name=\"" + pair[0] + "\"]").forEach(function (input) {
+        input.addEventListener("change", function () { clearError(pair[1], null); });
+      });
+    });
+
+  // --- Submit --------------------------------------------------------------
+  function payload() {
+    return {
+      name: value("survey-name"),
+      phone: value("survey-phone"),
+      rating: Number(checkedValue("rating")),
+      did_well: value("survey-did-well"),
+      could_improve: value("survey-could-improve"),
+      cleaner: value("survey-cleaner"),
+      book_again: checkedValue("book_again"),
+      recurring: checkedValue("recurring"),
+      website: value("survey-website"),
+      source: SOURCE,
+      page_url: window.location.href,
+      submitted_at: new Date().toISOString()
+    };
+  }
+
+  function sending(on) {
+    if (!submit) return;
+    submit.disabled = on;
+    submit.textContent = on ? "Sending..." : "Send my feedback";
+  }
+
+  function showThanks() {
+    if (card) card.hidden = true;
+    if (thanks) {
+      thanks.hidden = false;
+      const heading = document.getElementById("thanks-heading");
+      if (heading && typeof heading.focus === "function") heading.focus();
+      if (typeof thanks.scrollIntoView === "function") {
+        thanks.scrollIntoView({ block: "start" });
+      }
+    }
+  }
+
+  function showFailure() {
+    if (form) form.hidden = true;
+    if (errorPanel) errorPanel.hidden = false;
+  }
+
+  if (retry) {
+    retry.addEventListener("click", function () {
+      if (errorPanel) errorPanel.hidden = true;
+      if (form) form.hidden = false;
+      send();
+    });
+  }
+
+  function send() {
+    sending(true);
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload())
+    })
+      .then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          if (!response.ok || data.ok === false) throw new Error("submit failed");
+          return data;
+        });
+      })
+      .then(function () {
+        sending(false);
+        showThanks();
+      })
+      .catch(function () {
+        sending(false);
+        showFailure();
+      });
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (submit && submit.disabled) return;
+
+    const firstInvalid = validate();
+    if (firstInvalid) {
+      if (typeof firstInvalid.focus === "function") firstInvalid.focus();
+      return;
+    }
+
+    send();
+  });
+})();
+</script>
+</body>
+</html>
