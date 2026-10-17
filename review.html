@@ -40,22 +40,31 @@
   }
   .review-cta-note { font-size: 1rem; color: var(--color-text-muted); margin-top: 0.75rem; }
 
-  .private-toggle-row { margin-top: 2.25rem; }
-  .private-toggle {
-    font: inherit;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-action);
-    background: none;
-    border: 0;
-    padding: 0.75rem 0;
-    min-height: 44px;
-    text-align: left;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    cursor: pointer;
+  .review-options { display: grid; gap: 1rem; }
+  .review-card {
+    padding: 1.5rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-hard);
+    display: flex;
+    flex-direction: column;
   }
-  .private-toggle:hover { color: var(--color-action-dark); }
+  .review-card h2 { font-size: 1.3rem; margin-bottom: 0.35em; }
+  .review-card p { margin-bottom: 1rem; }
+  .review-card .review-cta { margin-top: auto; }
+  .review-card-private { border-top: 4px solid var(--color-action); }
+  /* Stacked layout: cards bleed slightly past the text column so the buttons
+     keep the full column width the Google button had before. */
+  @media (max-width: 1199px) {
+    .review-card { margin-inline: -0.75rem; padding-inline: calc(0.75rem - 1px); }
+  }
+  .private-toggle { cursor: pointer; font: inherit; font-size: 1.2rem; font-weight: 700; }
+  /* Side by side only when each card is at least as wide as the old single column,
+     so the Google button never gets smaller. */
+  @media (min-width: 1200px) {
+    .review-wrap { max-width: 74rem; }
+    .review-options { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  }
 
   .private-panel {
     margin-top: 0.75rem;
@@ -104,16 +113,24 @@
     <h1 id="greeting">How did we do?</h1>
     <p class="lede review-lede">Thank you for choosing Rivanna Home Cleaning. Your feedback helps a small local business grow.</p>
 
-    <a class="btn btn-primary review-cta" id="google-review-link" href="https://search.google.com/local/writereview?placeid=ChIJ9zlK5D3vLi4RetDQ9puwehI" target="_blank" rel="noopener">Leave a Google review</a>
-    <p class="review-cta-note">Opens Google in a new tab &mdash; a sentence or two is plenty.</p>
+    <div class="review-options">
+      <div class="review-card">
+        <h2>Happy with your clean?</h2>
+        <p>A quick Google review helps neighbors find us.</p>
+        <a class="btn btn-primary review-cta" id="google-review-link" href="https://search.google.com/local/writereview?placeid=ChIJ9zlK5D3vLi4RetDQ9puwehI" target="_blank" rel="noopener">Leave a Google review</a>
+        <p class="review-cta-note">Opens Google in a new tab. A sentence or two is plenty.</p>
+      </div>
 
-    <p class="private-toggle-row">
-      <button class="private-toggle" type="button" id="private-toggle" aria-expanded="false" aria-controls="private-feedback">Something not right? Tell us privately</button>
-    </p>
+      <div class="review-card review-card-private">
+        <h2>Not a 5-star experience?</h2>
+        <p>Tell me directly and I&rsquo;ll make it right.</p>
+        <button class="btn btn-outline review-cta private-toggle" type="button" id="private-toggle" aria-expanded="false" aria-controls="private-feedback">Tell Joel privately</button>
+      </div>
+    </div>
 
     <div class="private-panel" id="private-feedback" hidden>
       <h2>Tell us privately</h2>
-      <p>This goes straight to Joel, the owner. We&rsquo;ll make it right.</p>
+      <p>This goes straight to Joel, the owner. I&rsquo;ll make it right.</p>
 
       <div class="field">
         <label for="feedback-name">Your name</label>
@@ -200,7 +217,7 @@
       const open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", open ? "false" : "true");
       panel.hidden = open;
-      // The Google button above stays visible either way - no review gating.
+      // The Google button above stays visible either way, no review gating.
       if (!open && messageField) messageField.focus();
     });
   }
