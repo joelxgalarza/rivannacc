@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How did we do? | Rivanna Home Cleaning</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://rivannahomecleaning.com/review">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="180x180" href="assets/images/favicon-180x180.png">
+<link rel="icon" href="assets/images/rivanna-logo.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+<meta name="theme-color" content="#184D59">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!--
+  Page-scoped layout only. This is the one standalone page on the site (no nav,
+  no footer links, unlinked and noindex), so its handful of rules live here
+  instead of bloating the shared stylesheet. Tokens only: no new colors.
+-->
+<style>
+  .review-header { border-bottom: 1px solid var(--color-border); padding-block: 1rem; }
+  .review-main { padding-block: clamp(2rem, 7vw, 3.25rem); }
+  .review-wrap { max-width: 34rem; }
+  .review-wrap h1 { margin-bottom: 0.5em; }
+  .review-lede { margin-bottom: 1.75rem; }
+
+  /* Primary action: always visible, never gated. Oversized for thumbs. */
+  .review-cta {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding-block: 1.15rem;
+    font-size: 1.2rem;
+    min-height: 60px;
+  }
+  .review-cta-note { font-size: 1rem; color: var(--color-text-muted); margin-top: 0.75rem; }
+
+  .private-toggle-row { margin-top: 2.25rem; }
+  .private-toggle {
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-action);
+    background: none;
+    border: 0;
+    padding: 0.75rem 0;
+    min-height: 44px;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+  .private-toggle:hover { color: var(--color-action-dark); }
+
+  .private-panel {
+    margin-top: 0.75rem;
+    padding: 1.5rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: 4px solid var(--color-action);
+    box-shadow: var(--shadow-hard);
+  }
+  .private-panel[hidden] { display: none; }
+  .private-panel h2 { font-size: 1.35rem; }
+  .private-panel .field { margin-top: 1.25rem; }
+  .private-panel .field label { font-size: 1rem; }
+  .private-panel .field input,
+  .private-panel .field textarea { padding: 0.85rem; font-size: 1.05rem; }
+  .private-panel .field textarea { min-height: 130px; }
+  .private-actions { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
+  .private-actions .btn { width: 100%; white-space: normal; min-height: 56px; }
+
+  .review-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface-alt);
+    padding-block: 1.75rem;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+  }
+  .review-footer p { margin: 0 0 0.35rem; }
+  .review-footer a { font-weight: 700; }
+
+  @media (min-width: 520px) {
+    .private-actions { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="review-header">
+  <div class="container">
+    <a href="/" class="logo"><img src="assets/images/rivanna-logo.svg" alt="" width="71" height="54"><span class="logo-words">Rivanna <span>Home Cleaning</span></span></a>
+  </div>
+</header>
+
+<main class="review-main" id="main">
+  <div class="container review-wrap">
+    <h1 id="greeting">How did we do?</h1>
+    <p class="lede review-lede">Thank you for choosing Rivanna Home Cleaning. Your feedback helps a small local business grow.</p>
+
+    <a class="btn btn-primary review-cta" id="google-review-link" href="https://www.google.com/search?q=Rivanna+Home+Cleaning+Charlottesville+VA" target="_blank" rel="noopener">Leave a Google review</a>
+    <p class="review-cta-note">Opens Google in a new tab &mdash; a sentence or two is plenty.</p>
+
+    <p class="private-toggle-row">
+      <button class="private-toggle" type="button" id="private-toggle" aria-expanded="false" aria-controls="private-feedback">Something not right? Tell us privately</button>
+    </p>
+
+    <div class="private-panel" id="private-feedback" hidden>
+      <h2>Tell us privately</h2>
+      <p>This goes straight to Joel, the owner. We&rsquo;ll make it right.</p>
+
+      <div class="field">
+        <label for="feedback-name">Your name</label>
+        <input type="text" id="feedback-name" name="name" autocomplete="name" autocapitalize="words">
+      </div>
+      <div class="field">
+        <label for="feedback-message">What happened?</label>
+        <textarea id="feedback-message" name="message" rows="5"></textarea>
+      </div>
+
+      <div class="private-actions">
+        <a class="btn btn-primary" id="feedback-sms" href="sms:+14342056384">Send by text</a>
+        <a class="btn btn-outline" id="feedback-email" href="mailto:book@rivannahomecleaning.com">Send by email</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="review-footer">
+  <div class="container">
+    <p>Questions? Call or text <a href="tel:+14342056384">(434) 205-6384</a>.</p>
+    <p>&copy; 2026 Rivanna Home Cleaning &middot; Charlottesville, VA</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // TODO(Joel): paste your Google Business Profile review link here
+  // (Google Business Profile > Ask for reviews > copy link, looks like
+  // https://g.page/r/XXXX/review). Until then the button falls back to the
+  // Google search result for the business, so it is never a dead link.
+  const GOOGLE_REVIEW_URL = "";
+
+  const PHONE = "+14342056384";
+  const EMAIL = "book@rivannahomecleaning.com";
+  const EMAIL_SUBJECT = "Private feedback";
+
+  // --- Primary action: real Google link once the constant is filled in -----
+  const googleLink = document.getElementById("google-review-link");
+  if (googleLink && GOOGLE_REVIEW_URL) {
+    googleLink.href = GOOGLE_REVIEW_URL;
+  }
+
+  // --- Optional ?name= greeting -------------------------------------------
+  // Letters (incl. accented), spaces, hyphens and apostrophes only; 40 chars max.
+  function cleanName(raw) {
+    if (!raw) return "";
+    const stripped = raw
+      .replace(/[^A-Za-zÀ-ɏЀ-ӿ \-'’]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 40)
+      .trim();
+    // Names arrive from the CRM in any case; lift the first letter of each word.
+    return stripped.replace(/(^|[\s\-'’])([a-zà-ɏ])/g, function (m, before, letter) {
+      return before + letter.toUpperCase();
+    });
+  }
+
+  let name = "";
+  try {
+    name = cleanName(new URLSearchParams(window.location.search).get("name"));
+  } catch (e) {
+    name = "";
+  }
+
+  if (name) {
+    const heading = document.getElementById("greeting");
+    if (heading) heading.textContent = "Thanks, " + name + "! How did we do?";
+  }
+
+  // --- Private feedback disclosure ----------------------------------------
+  const toggle = document.getElementById("private-toggle");
+  const panel = document.getElementById("private-feedback");
+  const nameField = document.getElementById("feedback-name");
+  const messageField = document.getElementById("feedback-message");
+  const smsLink = document.getElementById("feedback-sms");
+  const emailLink = document.getElementById("feedback-email");
+
+  if (name && nameField) nameField.value = name;
+
+  if (toggle && panel) {
+    toggle.addEventListener("click", function () {
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", open ? "false" : "true");
+      panel.hidden = open;
+      // The Google button above stays visible either way - no review gating.
+      if (!open && messageField) messageField.focus();
+    });
+  }
+
+  // --- sms:/mailto: bodies -------------------------------------------------
+  function feedbackBody() {
+    const who = nameField ? nameField.value.trim() : "";
+    const what = messageField ? messageField.value.trim() : "";
+    if (who && what) return "Private feedback from " + who + ": " + what;
+    if (who) return "Private feedback from " + who;
+    if (what) return "Private feedback: " + what;
+    return "Private feedback";
+  }
+
+  function refreshLinks() {
+    const body = encodeURIComponent(feedbackBody());
+    // "?&body=" is the form that works on both iOS and Android.
+    if (smsLink) smsLink.href = "sms:" + PHONE + "?&body=" + body;
+    if (emailLink) {
+      emailLink.href = "mailto:" + EMAIL +
+        "?subject=" + encodeURIComponent(EMAIL_SUBJECT) +
+        "&body=" + body;
+    }
+  }
+
+  [nameField, messageField].forEach(function (field) {
+    if (field) field.addEventListener("input", refreshLinks);
+  });
+  [smsLink, emailLink].forEach(function (link) {
+    if (link) link.addEventListener("click", refreshLinks);
+  });
+
+  refreshLinks();
+})();
+</script>
+</body>
+</html>
