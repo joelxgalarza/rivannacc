@@ -1,7 +1,9 @@
 /**
  * POST /api/survey
  *
- * Cloudflare Pages Function. The survey page at /survey posts JSON here and
+ * Handled by the Worker in front of the static site (wrangler.jsonc routes
+ * /api/* here first; everything else is served straight from the assets).
+ * The survey page at /survey posts JSON here and
  * this handler forwards it to GoHighLevel, so the browser never talks to the
  * GHL domain directly and there is no CORS problem to work around.
  *
@@ -10,9 +12,9 @@
  * copy the URL it gives you (looks like
  * https://services.leadconnectorhq.com/hooks/.../webhook-trigger/...).
  *
- * Prefer not to keep it in the repo? Leave this empty and set the Pages
- * environment variable GHL_SURVEY_WEBHOOK_URL instead (Cloudflare dashboard >
- * Workers & Pages > this project > Settings > Variables). The environment
+ * Prefer not to keep it in the repo? Leave this empty and set the Worker
+ * variable GHL_SURVEY_WEBHOOK_URL instead (Cloudflare dashboard >
+ * Workers & Pages > rivannacc > Settings > Variables and Secrets). The environment
  * variable wins when both are set.
  */
 const WEBHOOK_URL = "";
@@ -53,7 +55,7 @@ function splitName(fullName) {
   return { first_name: parts[0], last_name: parts.slice(1).join(" ") };
 }
 
-export async function onRequestPost(context) {
+async function handleSurvey(context) {
   let body;
   try {
     body = await context.request.json();
@@ -125,12 +127,7 @@ export async function onRequestPost(context) {
   return json({ ok: true }, 200);
 }
 
-/**
- * Pages routes POST to onRequestPost above and everything else here, so a
- * stray GET of /api/survey gets a clear 405 instead of falling through to a
- * 404 page.
- */
-export function onRequest() {
+function methodNotAllowed() {
   return new Response(JSON.stringify({ ok: false, error: "method_not_allowed" }), {
     status: 405,
     headers: {
@@ -140,3 +137,17 @@ export function onRequest() {
     }
   });
 }
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/api/survey" || url.pathname === "/api/survey/") {
+      if (request.method !== "POST") return methodNotAllowed();
+      return handleSurvey({ request: request, env: env });
+    }
+    if (url.pathname.startsWith("/api/")) {
+      return new Response("Not found", { status: 404 });
+    }
+    return env.ASSETS.fetch(request);
+  }
+};
