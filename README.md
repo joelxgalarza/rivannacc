@@ -66,7 +66,8 @@ rivanna-site/
 
 Modeled on the advertorial/local-SEO pattern (distinct per-location copy, local FAQ,
 location-specific CTA). One page per neighborhood/town listed in `service-areas.html`
-(29 total, including a Charlottesville city page). Each page includes:
+(28 pages; Charlottesville itself is targeted by the homepage, and `/areas/charlottesville`
+301-redirects there via `_redirects`). Each page includes:
 - A unique, geographically accurate description (not generic filler) sourced from real
   local landmarks and neighborhood character.
 - A "Services {Area} Customers Book Most" list, ordered to reflect what's actually likely
