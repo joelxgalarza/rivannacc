@@ -1,75 +1,79 @@
 {
-  "_note": "This session's cloud sandbox is not permitted to download from Higgsfield's CDN host (d8j0ntlcm91z4.cloudfront.net) directly: org egress policy blocks that host for outbound fetches from this container, so these are hotlinked CDN URLs rather than local files. They render fine as-is, but for a production launch they should be downloaded once and self-hosted in assets/images/ (swap the src values below for local paths) so the site doesn't depend on Higgsfield's CDN staying up long-term. Ask Claude to pull local copies via your linked computer if you want that done before launch.",
+  "_note": "Real Rivanna job photos are self-hosted under assets/images/. Paths are relative to the site root. Team portraits were removed because there are no real staff photos. Carpet and upholstery still use generic stock with no faces, kept so those layouts still have a photo. Post-construction, janitorial, office, and commercial used stock photos of people, so those slots now use brand-mark.svg until a real job photo exists. The homepage before/after section uses the raw before-kitchen and after-kitchen pair. ba-split-kitchen, ba-split-jet-tub, and accent-shower-detail are self-hosted and not placed in a page. accent-cooktop was not published because a face is reflected in the microwave door.",
   "hero": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_30b01e16-bbfc-4b47-bd40-04aef9251c76.png",
-    "alt": "Placeholder photo: professional cleaner wiping down a bright kitchen counter (replace with real photo)"
-  },
-  "team-1": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172831_6bdd68a4-c36c-41cd-b440-eb181c89b92b.png",
-    "alt": "Placeholder team portrait (replace with real team photo)"
-  },
-  "team-2": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172831_9f4b5bf5-f0e2-4921-80dd-3093bdd2e164.png",
-    "alt": "Placeholder team portrait (replace with real team photo)"
-  },
-  "team-3": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_26465863-b2d3-4927-98ee-1675c671458c.png",
-    "alt": "Placeholder team portrait (replace with real team photo)"
-  },
-  "service-airbnb": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2ac3aed2-002f-439a-8040-7f8d448d1028.png",
-    "alt": "AirBnB / short-term rental turnover cleaning"
-  },
-  "service-deep-cleaning": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_b5d8f7d8-bfe7-4c61-bfa7-cffbd9821580.png",
-    "alt": "Deep cleaning service"
-  },
-  "service-move-out-in": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_23e21e1a-9072-4f6b-bd0f-fd16cb522dec.png",
-    "alt": "Move-out / move-in cleaning"
-  },
-  "service-maid-recurring": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2d0a3f71-f7e7-4f05-a568-09b85df97e5e.png",
-    "alt": "Recurring maid service"
-  },
-  "service-apartment": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172137_87ac0e8c-4b96-4652-b438-f8e61ebcd7c7.png",
-    "alt": "Apartment cleaning"
-  },
-  "service-post-construction": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172831_ee570ae5-320a-4697-b49e-b61a51fdeeae.png",
-    "alt": "Post-construction cleaning"
-  },
-  "service-carpet": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_2d9f52cd-53a9-4957-aca5-51acc6ea9306.png",
-    "alt": "Carpet cleaning"
-  },
-  "service-upholstery": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_172136_e0cfd8d2-f031-4b49-a408-7ff38f1730c7.png",
-    "alt": "Upholstery cleaning"
-  },
-  "service-home-organization": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173022_62dd6127-a9a2-43eb-ad16-3e8170225298.png",
-    "alt": "Home organization"
-  },
-  "service-janitorial": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173022_1d04ad81-e7f1-494e-a250-a229ce332224.png",
-    "alt": "Janitorial services"
-  },
-  "service-office": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173022_0926b373-7531-43a1-8be8-8105e1fca0f6.png",
-    "alt": "Office cleaning"
-  },
-  "service-commercial": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173022_a1ebc30d-ac28-4bba-a631-081bba2d78cf.png",
-    "alt": "Commercial cleaning"
+    "url": "assets/images/hero.jpg",
+    "alt": "White kitchen with granite counters, white cabinets, and a wood-look floor after cleaning"
   },
   "before-kitchen": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173121_c2c8f5db-fd5e-4722-9c63-cc84f65e1851.png",
-    "alt": "Before: cluttered kitchen counter"
+    "url": "assets/images/before-kitchen.jpg",
+    "alt": "Kitchen before cleaning, with dishes, fruit, and a drink still on the granite counters"
   },
   "after-kitchen": {
-    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_33IUc0kMyk9Xdaf7sFSzpsYUUFD/hf_20260914_173121_edf7dce1-4cb4-45cc-a1ec-7c6f75d4fa13.png",
-    "alt": "After: spotless kitchen counter"
+    "url": "assets/images/after-kitchen.jpg",
+    "alt": "The same kitchen after cleaning, with the counters cleared and the floor swept"
+  },
+  "ba-split-kitchen": {
+    "url": "assets/images/ba-split-kitchen.jpg",
+    "alt": "Side-by-side before and after of the same kitchen"
+  },
+  "ba-split-jet-tub": {
+    "url": "assets/images/ba-split-jet-tub.jpg",
+    "alt": "Side-by-side before and after of a jet tub"
+  },
+  "service-airbnb": {
+    "url": "assets/images/service-airbnb.jpg",
+    "alt": "Dining room with a wood table, chairs, and a chandelier after a turnover clean"
+  },
+  "service-deep-cleaning": {
+    "url": "assets/images/service-deep-cleaning.jpg",
+    "alt": "White corner jet tub and tiled bathroom after a deep clean"
+  },
+  "service-move-out-in": {
+    "url": "assets/images/service-move-out-in.jpg",
+    "alt": "Laundry room with a mopped tile floor, washer, and dryer after a move-out clean"
+  },
+  "service-maid-recurring": {
+    "url": "assets/images/service-maid-recurring.jpg",
+    "alt": "Primary bedroom with a made bed and a cleared floor after a recurring clean"
+  },
+  "service-apartment": {
+    "url": "assets/images/service-apartment.jpg",
+    "alt": "White kitchen with granite counters, white cabinets, and a wood-look floor after cleaning"
+  },
+  "service-home-organization": {
+    "url": "assets/images/service-home-organization.jpg",
+    "alt": "Living room with chairs, a bookcase, and folded quilts arranged on open shelves"
+  },
+  "service-carpet": {
+    "url": "assets/images/service-carpet.png",
+    "alt": "Carpet cleaning wand on a beige carpet"
+  },
+  "service-upholstery": {
+    "url": "assets/images/service-upholstery.png",
+    "alt": "Upholstery tool cleaning a light gray sofa"
+  },
+  "service-post-construction": {
+    "url": "assets/images/brand-mark.svg",
+    "alt": "Rivanna Home Cleaning"
+  },
+  "service-janitorial": {
+    "url": "assets/images/brand-mark.svg",
+    "alt": "Rivanna Home Cleaning"
+  },
+  "service-office": {
+    "url": "assets/images/brand-mark.svg",
+    "alt": "Rivanna Home Cleaning"
+  },
+  "service-commercial": {
+    "url": "assets/images/brand-mark.svg",
+    "alt": "Rivanna Home Cleaning"
+  },
+  "accent-shower-detail": {
+    "url": "assets/images/accent-shower-detail.jpg",
+    "alt": "Close view of a clean white shower and tile"
+  },
+  "brand-mark": {
+    "url": "assets/images/brand-mark.svg",
+    "alt": "Rivanna Home Cleaning"
   }
 }

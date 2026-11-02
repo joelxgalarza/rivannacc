@@ -31,7 +31,7 @@ rivanna-site/
     images/                   (reserved for locally-hosted images, see note below)
   data/
     reviews.json              3 real customer review objects
-  images.json                 Maps image keys to their (currently hotlinked) URLs + alt text
+  images.json                 Maps image keys to self-hosted paths + alt text
   areas/                      29 individual service-area advertorial/SEO pages (one per
                               neighborhood/town in service-areas.html), each with unique
                               local copy, a local FAQ, featured services, and its own CTA
@@ -127,18 +127,17 @@ items to resolve before going live:
 - [ ] Do not add any other award claims until Rivanna has actually received them.
 
 ### 5. Photography
-- [ ] All current photos (hero, service cards, before/after, team portraits) are
-      Higgsfield-generated placeholders, hotlinked from Higgsfield's CDN
-      (`d8j0ntlcm91z4.cloudfront.net`) per `images.json`. For production, download these
-      once and self-host them under `assets/images/` (swap the `src` values across the
-      HTML files and in `images.json`) so the site doesn't depend on a third-party CDN
-      staying available long-term.
-- [ ] Team portraits (`about.html`) are explicitly labeled "Placeholder photo: replace
-      with real team photo" in both the visible caption and the `alt` text. Replace with
-      real staff photos once available (optional, placeholders can stay if preferred).
-- [ ] No logo exists yet. The site currently uses a text wordmark ("Rivanna Home
-      Cleaning"). Add a logo file and swap the `.logo` markup in the header/footer once one
-      exists.
+- [x] Hero, kitchen before/after, and the service photos we have from real jobs are
+      self-hosted in `assets/images/` and mapped in `images.json`. The homepage before/after
+      section uses the raw `before-kitchen.jpg` and `after-kitchen.jpg` pair.
+- [x] Team portraits are removed. There are no real staff photos, and generated faces
+      must not be added. `about.html` has no team portrait cards.
+- [ ] Carpet and upholstery still use generic stock photos with no faces
+      (`service-carpet.png`, `service-upholstery.png`) so those layouts keep an image.
+      Replace them when a real job photo exists.
+- [ ] Post-construction, janitorial, office, and commercial had stock photos of people.
+      Those slots now use `assets/images/brand-mark.svg` until a real job photo exists.
+- [x] The logo is `assets/images/rivanna-logo.svg`, used in the header and footer.
 
 ### 6. Domain & hosting
 - [ ] Choose and connect a domain.
