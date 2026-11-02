@@ -48,24 +48,111 @@ document.addEventListener('click', function (e) {
 <link rel="stylesheet" href="assets/css/styles.css">
 <!--
   Keep in sync with data/reviews.json: update aggregateRating and the review
-  list below whenever reviews change. Add "url" once the domain is live.
+  list below whenever reviews change.
 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": "https://rivannahomecleaning.com/#business",
   "name": "Rivanna Home Cleaning",
-  "description": "Locally owned residential and commercial cleaning serving Charlottesville, VA and the surrounding area.",
+  "url": "https://rivannahomecleaning.com/",
+  "logo": "https://rivannahomecleaning.com/assets/images/rivanna-logo.svg",
+  "image": "https://rivannahomecleaning.com/assets/images/hero.jpg",
+  "description": "Locally owned house cleaning service in Charlottesville, VA offering recurring maid service, deep cleaning, and move-out and move-in cleaning across Albemarle County.",
+  "telephone": "+1-434-205-6384",
+  "email": "book@rivannahomecleaning.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Charlottesville",
     "addressRegion": "VA",
     "addressCountry": "US"
   },
-  "areaServed": "Charlottesville, VA and surrounding areas",
-  "telephone": "+1-434-205-6384",
-  "email": "book@rivannahomecleaning.com",
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ9zlK5D3vLi4RetDQ9puwehI",
+  "sameAs": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ9zlK5D3vLi4RetDQ9puwehI"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Charlottesville", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "AdministrativeArea", "name": "Albemarle County", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Crozet", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Belmont", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Belvedere", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Boyd Tavern", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Cascadia", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Dunlora", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Earlysville", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "AdministrativeArea", "name": "Fluvanna County", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Fontana", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Forest Lakes", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Franklin", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Free Union", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Fry's Spring", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Glenmore", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Gordonsville", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Hollymead", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Keswick", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Key West", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Lake Monticello", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Milton", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Palmyra", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Pantops", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Rivanna Village", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Riverview", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Ruckersville", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Scottsville", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Shadwell", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Stony Point", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Woolen Mills", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } },
+    { "@type": "City", "name": "Zion Crossroads", "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" } }
+  ],
   "openingHours": "Mo-Fr 08:00-20:00",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Residential House Cleaning",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Deep Cleaning",
+          "url": "https://rivannahomecleaning.com/services/deep-cleaning"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Recurring Maid Service",
+          "url": "https://rivannahomecleaning.com/services/recurring-maid"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Move-Out and Move-In Cleaning",
+          "url": "https://rivannahomecleaning.com/services/move-out-in"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Apartment Cleaning",
+          "url": "https://rivannahomecleaning.com/services/apartment"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AirBnB Turnover",
+          "url": "https://rivannahomecleaning.com/services/airbnb"
+        }
+      }
+    ]
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
