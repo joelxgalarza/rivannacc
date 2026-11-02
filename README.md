@@ -30,7 +30,7 @@ rivanna-site/
     js/faq.js                 FAQ accordion toggle logic
     images/                   (reserved for locally-hosted images, see note below)
   data/
-    reviews.json              6 real customer review objects
+    reviews.json              3 real customer review objects
   images.json                 Maps image keys to their (currently hotlinked) URLs + alt text
   areas/                      29 individual service-area advertorial/SEO pages (one per
                               neighborhood/town in service-areas.html), each with unique
@@ -110,7 +110,7 @@ items to resolve before going live:
       submit (see the inline `<script>` at the bottom of each page).
 
 ### 3. Reviews
-- [x] `data/reviews.json` holds 6 real customer reviews. To add more, append
+- [x] `data/reviews.json` holds 3 real customer reviews. To add more, append
       objects to the JSON array and update the matching JSON-LD (see below).
 - [x] `Review` / `AggregateRating` JSON-LD structured data is in the `<head>` of
       `index.html` and `reviews.html`. Keep it in sync with `data/reviews.json`:
@@ -168,9 +168,10 @@ items to resolve before going live:
 ## Notes on deliberate design decisions (per the build plan)
 
 - **Reviews are real customer testimonials.** Each entry in
-  `data/reviews.json` uses a first-name + last-initial format. New reviews can be
-  appended to the JSON array with no template changes (see `assets/js/carousel.js`
-  and the inline script in `reviews.html`).
+  `data/reviews.json` uses a first name, plus a last initial only when it is
+  known. Do not invent last initials. New reviews can be appended to the JSON
+  array with no template changes (see `assets/js/carousel.js` and the inline
+  script in `reviews.html`).
 - **Reviewer avatars are CSS initials bubbles**, not photos: a colored circle with the
   reviewer's first initial. No AI-generated face is ever presented as a specific person's
   photo.
