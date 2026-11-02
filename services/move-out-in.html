@@ -46,6 +46,156 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<!--
+  Service, FAQPage, and BreadcrumbList for this page. The provider @id points
+  to the LocalBusiness on the homepage. FAQ text must match the visible #faq
+  items on this page exactly.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rivannahomecleaning.com/services/move-out-in#service",
+      "serviceType": "Move-out and move-in cleaning",
+      "name": "Move-Out and Move-In Cleaning in Charlottesville, VA",
+      "description": "Move-out and move-in cleaning in Charlottesville, VA and Albemarle County for empty homes, with inside cabinets, drawers, and closets, wiped baseboards, and a kitchen and bath reset. We bring our own supplies and equipment.",
+      "url": "https://rivannahomecleaning.com/services/move-out-in",
+      "provider": {
+        "@id": "https://rivannahomecleaning.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Charlottesville",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Albemarle County",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Pantops",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Forest Lakes",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hollymead",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Crozet",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Rivanna Village",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rivannahomecleaning.com/services/move-out-in#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When should I schedule the clean around my move?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schedule a move-out clean after the last box leaves, and a move-in clean before the first box arrives. Put your truck window and key handoff time on the quote form. We plan the visit around them so the clean lands in the gap between moving and handing over keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this clean get my deposit back?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We clean what property managers check, including inside cabinets, baseboards, appliances, and bathroom tile. We cannot promise what your landlord decides, since deposits also cover damage and lease terms. Share your walkthrough date on the quote form so we can plan the visit around it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean inside the oven and fridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your kitchen reset covers appliance exteriors, cabinet fronts, sinks, and counters, and inside the oven plus inside the fridge come with the visit when you request them. Your exact checklist is confirmed at booking and your quote reflects your actual scope with no surprise charges. List the appliances you want opened up on the quote form and we will call back with a phone quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be there during the clean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Leave a key, a garage code, or a door code on the quote form, and tell us about alarms and parking. You can also be present if you prefer, though empty homes go faster without foot traffic."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rivannahomecleaning.com/services/move-out-in#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rivannahomecleaning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rivannahomecleaning.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Move-Out / Move-In",
+          "item": "https://rivannahomecleaning.com/services/move-out-in"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""

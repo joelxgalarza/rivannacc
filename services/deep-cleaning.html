@@ -46,6 +46,147 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<!--
+  Service, FAQPage, and BreadcrumbList for this page. The provider @id points
+  to the LocalBusiness on the homepage. FAQ text must match the visible #faq
+  items on this page exactly.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rivannahomecleaning.com/services/deep-cleaning#service",
+      "serviceType": "Deep cleaning",
+      "name": "Deep Cleaning in Charlottesville, VA",
+      "description": "Deep cleaning in Charlottesville, VA and Albemarle County for baseboards, grout, fixtures, and vents that routine cleans skip. A deep clean works top to bottom through every room you include, and we bring our own supplies and equipment.",
+      "url": "https://rivannahomecleaning.com/services/deep-cleaning",
+      "provider": {
+        "@id": "https://rivannahomecleaning.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Charlottesville",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Albemarle County",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Pantops",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Forest Lakes",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hollymead",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Crozet",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rivannahomecleaning.com/services/deep-cleaning#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is a deep clean different from a standard visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard visit maintains the rooms you live in with dusting, vacuuming, mopping, and wipedown surfaces. A deep clean adds the detail work that routines skip, including baseboards, window sills, door frames, grout lines, light fixtures, and vent covers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle pets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us about your animals on the quote form. Friendly dogs and cats are welcome, and we keep doors and gates shut as we move room to room. A pet that gets nervous around visitors or vacuum noise does better in a closed room during the visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to provide supplies or equipment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you do not need to provide supplies or equipment because we bring our own to every deep clean. Your only prep is clearing counters and floors so we can reach more surface, and the exact checklist is confirmed at booking so you know what each room gets. List your rooms in the quote form and we will call you with your phone quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if something gets missed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us within 24 hours and we come back and re-clean it at no charge. That promise covers every deep clean."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rivannahomecleaning.com/services/deep-cleaning#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rivannahomecleaning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rivannahomecleaning.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Deep Cleaning",
+          "item": "https://rivannahomecleaning.com/services/deep-cleaning"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""

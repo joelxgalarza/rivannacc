@@ -46,6 +46,156 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<!--
+  Service, FAQPage, and BreadcrumbList for this page. The provider @id points
+  to the LocalBusiness on the homepage. FAQ text must match the visible #faq
+  items on this page exactly.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rivannahomecleaning.com/services/recurring-maid#service",
+      "serviceType": "Recurring house cleaning",
+      "name": "Recurring House Cleaning and Maid Service in Charlottesville, VA",
+      "description": "Recurring house cleaning and maid service in Charlottesville, VA and Albemarle County on weekly, biweekly, or monthly visits, plus one-time cleans. Your first visit runs deeper to set the baseline, and we bring our own supplies and equipment to every visit.",
+      "url": "https://rivannahomecleaning.com/services/recurring-maid",
+      "provider": {
+        "@id": "https://rivannahomecleaning.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Charlottesville",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Albemarle County",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Pantops",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Forest Lakes",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hollymead",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Crozet",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lake Monticello",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rivannahomecleaning.com/services/recurring-maid#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to be home during the clean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Leave a key, a garage code, or a door code on the quote form, and we handle the rest. You can be home if you prefer. Either way, tell us about alarms and pets and parking when you book so the visit runs smoothly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle pets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Note your animals on the quote form. Friendly dogs and cats are no problem, and we are careful with doors and gates. If a pet gets anxious around visitors or equipment noise, set up a closed room for them before we arrive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the first visit a deeper clean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Routine visits maintain a clean home, and they skip detail work by design. The first visit covers baseboards and sills and grout and fixtures and buildup so recurring visits start from a true clean baseline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if something gets missed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us within 24 hours and we come back and re-clean it at no charge. That applies to every visit."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rivannahomecleaning.com/services/recurring-maid#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rivannahomecleaning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rivannahomecleaning.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Recurring Maid Service",
+          "item": "https://rivannahomecleaning.com/services/recurring-maid"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""
