@@ -46,6 +46,94 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<!--
+  Service, FAQPage, and BreadcrumbList for this page. The provider @id points
+  to the LocalBusiness on the homepage. FAQ text must match the visible #faq
+  items on this page exactly.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rivannahomecleaning.com/areas/crozet#service",
+      "serviceType": "House cleaning",
+      "name": "House Cleaning in Crozet, VA",
+      "description": "House cleaning in Crozet, VA from a locally owned company, including move-in and post-construction cleans for new homes, recurring maid service, and deep cleaning for established homes.",
+      "url": "https://rivannahomecleaning.com/areas/crozet",
+      "provider": {
+        "@id": "https://rivannahomecleaning.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Crozet",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rivannahomecleaning.com/areas/crozet#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you clean brand-new construction in neighborhoods like Old Trail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Post-construction and move-in cleaning is some of our most common work in Crozet. Fill out the quote form with the home size and builder handoff state, and we call you back with a phone quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I book the move-in clean before or after furniture arrives?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Before, when closets, cabinets, and corners stay fully reachable for detail work. Put your move date on the quote form and we will call you with a phone quote planned around closing day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if something gets missed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us within 24 hours and we come back and re-clean it at no charge. That applies to every visit."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rivannahomecleaning.com/areas/crozet#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rivannahomecleaning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Service Areas",
+          "item": "https://rivannahomecleaning.com/service-areas"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crozet",
+          "item": "https://rivannahomecleaning.com/areas/crozet"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""

@@ -46,6 +46,147 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<!--
+  Service, FAQPage, and BreadcrumbList for this page. The provider @id points
+  to the LocalBusiness on the homepage. FAQ text must match the visible #faq
+  items on this page exactly.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rivannahomecleaning.com/services/airbnb#service",
+      "serviceType": "Airbnb turnover cleaning",
+      "name": "Airbnb Turnover Cleaning in Charlottesville, VA",
+      "description": "Airbnb turnover cleaning in Charlottesville, VA for short-term rentals. Each turnover includes fresh linens, a full reset of the kitchen and bathrooms, and your restock checklist, and we bring our own cleaning supplies and equipment.",
+      "url": "https://rivannahomecleaning.com/services/airbnb",
+      "provider": {
+        "@id": "https://rivannahomecleaning.com/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Charlottesville",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Albemarle County",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Woolen Mills",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Riverview",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Pantops",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Belvedere",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "VA",
+            "addressCountry": "US"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rivannahomecleaning.com/services/airbnb#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide the sheets and consumables?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You supply the linens and guest consumables, and we handle everything else. Leave a backup set of sheets and towels and soap and paper goods at the property, and we make beds with fresh linens and restock to your checklist each turnover. Your supply list stays on file per property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to meet you at the property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Leave a lockbox code or smart lock code or key arrangement in the quote form. Many hosts never attend a turnover. Tell us the parking setup and any building access rules when you book, and flag anything new before each stay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens with back-to-back bookings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Put both the checkout and check-in times on the quote form. We plan around your window and run the full checklist every time, not a shortened version. During lease turnover peaks in late spring and late summer, booking ahead protects your window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the next guest finds something missed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us within 24 hours and we come back and re-clean it at no charge. That covers every turnover."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rivannahomecleaning.com/services/airbnb#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rivannahomecleaning.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rivannahomecleaning.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Airbnb Turnover",
+          "item": "https://rivannahomecleaning.com/services/airbnb"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""
