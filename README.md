@@ -30,8 +30,8 @@ rivanna-site/
     js/faq.js                 FAQ accordion toggle logic
     images/                   (reserved for locally-hosted images, see note below)
   data/
-    reviews.json              6 real customer review objects
-  images.json                 Maps image keys to their (currently hotlinked) URLs + alt text
+    reviews.json              3 real customer review objects
+  images.json                 Maps image keys to self-hosted paths + alt text
   areas/                      29 individual service-area advertorial/SEO pages (one per
                               neighborhood/town in service-areas.html), each with unique
                               local copy, a local FAQ, featured services, and its own CTA
@@ -110,7 +110,7 @@ items to resolve before going live:
       submit (see the inline `<script>` at the bottom of each page).
 
 ### 3. Reviews
-- [x] `data/reviews.json` holds 6 real customer reviews. To add more, append
+- [x] `data/reviews.json` holds 3 real customer reviews. To add more, append
       objects to the JSON array and update the matching JSON-LD (see below).
 - [x] `Review` / `AggregateRating` JSON-LD structured data is in the `<head>` of
       `index.html` and `reviews.html`. Keep it in sync with `data/reviews.json`:
@@ -127,18 +127,17 @@ items to resolve before going live:
 - [ ] Do not add any other award claims until Rivanna has actually received them.
 
 ### 5. Photography
-- [ ] All current photos (hero, service cards, before/after, team portraits) are
-      Higgsfield-generated placeholders, hotlinked from Higgsfield's CDN
-      (`d8j0ntlcm91z4.cloudfront.net`) per `images.json`. For production, download these
-      once and self-host them under `assets/images/` (swap the `src` values across the
-      HTML files and in `images.json`) so the site doesn't depend on a third-party CDN
-      staying available long-term.
-- [ ] Team portraits (`about.html`) are explicitly labeled "Placeholder photo: replace
-      with real team photo" in both the visible caption and the `alt` text. Replace with
-      real staff photos once available (optional, placeholders can stay if preferred).
-- [ ] No logo exists yet. The site currently uses a text wordmark ("Rivanna Home
-      Cleaning"). Add a logo file and swap the `.logo` markup in the header/footer once one
-      exists.
+- [x] Hero, kitchen before/after, and the service photos we have from real jobs are
+      self-hosted in `assets/images/` and mapped in `images.json`. The homepage before/after
+      section uses the raw `before-kitchen.jpg` and `after-kitchen.jpg` pair.
+- [x] Team portraits are removed. There are no real staff photos, and generated faces
+      must not be added. `about.html` has no team portrait cards.
+- [ ] Carpet and upholstery still use generic stock photos with no faces
+      (`service-carpet.png`, `service-upholstery.png`) so those layouts keep an image.
+      Replace them when a real job photo exists.
+- [ ] Post-construction, janitorial, office, and commercial had stock photos of people.
+      Those slots now use `assets/images/brand-mark.svg` until a real job photo exists.
+- [x] The logo is `assets/images/rivanna-logo.svg`, used in the header and footer.
 
 ### 6. Domain & hosting
 - [ ] Choose and connect a domain.
@@ -168,9 +167,10 @@ items to resolve before going live:
 ## Notes on deliberate design decisions (per the build plan)
 
 - **Reviews are real customer testimonials.** Each entry in
-  `data/reviews.json` uses a first-name + last-initial format. New reviews can be
-  appended to the JSON array with no template changes (see `assets/js/carousel.js`
-  and the inline script in `reviews.html`).
+  `data/reviews.json` uses a first name, plus a last initial only when it is
+  known. Do not invent last initials. New reviews can be appended to the JSON
+  array with no template changes (see `assets/js/carousel.js` and the inline
+  script in `reviews.html`).
 - **Reviewer avatars are CSS initials bubbles**, not photos: a colored circle with the
   reviewer's first initial. No AI-generated face is ever presented as a specific person's
   photo.
