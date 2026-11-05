@@ -612,3 +612,45 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 .num-list li::before { content: counter(steps, decimal-leading-zero); font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; color: var(--color-action); line-height: 1; }
 .num-list strong { display: block; font-size: 1.1rem; }
 .num-list span { color: var(--color-text-muted); font-size: 0.95rem; }
+
+/* ---------------------------------------------------------------------
+   Book now (/booknow)
+   The video frame stays hidden until data-vsl-url is set on #booknow-vsl.
+   --------------------------------------------------------------------- */
+.booknow-vsl[hidden] { display: none; }
+.booknow-vsl-frame {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background: var(--color-surface-alt);
+  border: 1px dashed var(--color-border);
+}
+.booknow-vsl-frame.is-set {
+  border-style: solid;
+  background: var(--color-action-dark);
+}
+.booknow-vsl-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.booknow-column {
+  width: 100%;
+  max-width: 720px;
+}
+.booknow-form-slot {
+  width: 100%;
+  min-height: 1131px;
+  margin-bottom: 1rem;
+}
+.booknow-form-slot iframe {
+  width: 100%;
+  height: 1131px;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
