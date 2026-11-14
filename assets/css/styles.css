@@ -616,8 +616,8 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 
 /* ---------------------------------------------------------------------
    Book now (/booknow)
-   Funnel layout: slim header, stars + trust line, headline, subheadline,
-   video, calendar card, button, proof, final button, slim footer.
+   Funnel layout: logo-only header, stars + trust line, headline, subheadline,
+   video, calendar card, proof, slim footer. No CTA buttons or chat widget.
    The video frame shows a placeholder until data-vsl-url is set on #booknow-vsl.
    --------------------------------------------------------------------- */
 .funnel-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.5rem; }
@@ -634,12 +634,14 @@ html:has(body.funnel-page) { scroll-padding-top: 76px; }
 .booknow-trust-line { margin: 0.2rem 0 0.6rem; font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); }
 .booknow-hero h1 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.15rem); line-height: 1.15; margin-bottom: 0.4rem; }
 .booknow-subhead { margin: 0 auto; max-width: 56ch; font-size: 1.02rem; color: var(--color-text-muted); }
-.funnel-page .booknow-vsl { padding-block: 0.75rem clamp(1.75rem, 4vw, 2.75rem); }
-.booknow-cta { display: flex; justify-content: center; margin-top: 1.75rem; }
-.booknow-cta .btn { min-width: min(100%, 300px); }
+.funnel-page .booknow-vsl { padding-block: 0.75rem 0; }
+.funnel-page .booknow-book { padding-top: 1.25rem; }
+.funnel-page .booknow-card { padding-top: 1.25rem; }
+@media (max-width: 640px) { body.funnel-page { padding-bottom: 0; } }
+/* Height-aware cap so the calendar card heading peeks above the fold on short screens. */
 .booknow-vsl-frame {
   width: 100%;
-  max-width: 780px;
+  max-width: min(780px, max(320px, calc((100vh - 440px) * 16 / 9)));
   margin-inline: auto;
   aspect-ratio: 16 / 9;
   position: relative;
