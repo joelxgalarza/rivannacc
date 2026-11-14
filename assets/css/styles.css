@@ -616,19 +616,30 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 
 /* ---------------------------------------------------------------------
    Book now (/booknow)
-   Stars, trust line, headline, subheadline, button, video, calendar card,
-   button, proof, final button.
+   Funnel layout: slim header, stars + trust line, headline, subheadline,
+   video, calendar card, button, proof, final button, slim footer.
    The video frame shows a placeholder until data-vsl-url is set on #booknow-vsl.
    --------------------------------------------------------------------- */
-.booknow-stars { display: flex; justify-content: center; gap: 0.3rem; color: var(--color-star); }
-.booknow-stars svg { width: 26px; height: 26px; }
-.booknow-trust-line { margin: 0.5rem 0 1rem; font-size: 0.95rem; font-weight: 500; color: var(--color-text-muted); }
-.booknow-cta { display: flex; justify-content: center; margin-top: 2rem; }
+.funnel-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.5rem; }
+.funnel-header .logo img { height: 40px; }
+.funnel-header .logo-words { font-size: 1.15rem; }
+.funnel-header .logo-words > span { font-size: 0.72rem; }
+.funnel-footer { padding-top: 0; }
+html:has(body.funnel-page) { scroll-padding-top: 76px; }
+.funnel-page section { padding-block: clamp(1.75rem, 4vw, 2.75rem); }
+.funnel-page .booknow-hero { text-align: center; padding-block: clamp(1rem, 2.5vw, 1.5rem) 0.75rem; }
+.booknow-hero .container { max-width: 780px; }
+.booknow-stars { display: flex; justify-content: center; gap: 0.15rem; color: var(--color-star); }
+.booknow-stars svg { width: 16px; height: 16px; }
+.booknow-trust-line { margin: 0.2rem 0 0.6rem; font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); }
+.booknow-hero h1 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.15rem); line-height: 1.15; margin-bottom: 0.4rem; }
+.booknow-subhead { margin: 0 auto; max-width: 56ch; font-size: 1.02rem; color: var(--color-text-muted); }
+.funnel-page .booknow-vsl { padding-block: 0.75rem clamp(1.75rem, 4vw, 2.75rem); }
+.booknow-cta { display: flex; justify-content: center; margin-top: 1.75rem; }
 .booknow-cta .btn { min-width: min(100%, 300px); }
-.booknow-hero .booknow-cta { margin-top: 1.75rem; }
 .booknow-vsl-frame {
   width: 100%;
-  max-width: 860px;
+  max-width: 780px;
   margin-inline: auto;
   aspect-ratio: 16 / 9;
   position: relative;
@@ -663,7 +674,7 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 .booknow-vsl-placeholder p { margin: 0; font-weight: 600; font-size: 1rem; }
 .booknow-card {
   width: 100%;
-  max-width: 860px;
+  max-width: 780px;
   margin-inline: auto;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
