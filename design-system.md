@@ -30,6 +30,7 @@ trustworthy" in the abstract.
   --color-border: #CBDCDC;        /* cool light border */
   --color-ridge: #237080;         /* mid teal: eyebrows + small-caps labels ONLY */
   --color-feedback-success: #2E7D4F; /* form confirmations ONLY, never brand/decoration */
+  --color-star: #A8760E;          /* gold: /booknow hero star row ONLY (owner request, 2026-11-14) */
 }
 ```
 
