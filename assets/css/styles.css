@@ -17,6 +17,7 @@
   --color-border: #CBDCDC;
   --color-ridge: #237080;
   --color-feedback-success: #2E7D4F;
+  --color-star: #A8760E; /* owner-requested gold, /booknow star row ONLY */
   --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Bitter", Georgia, "Times New Roman", serif;
   --radius-sm: 6px;
@@ -615,9 +616,13 @@ a.area-chip:hover { text-decoration-color: currentColor; }
 
 /* ---------------------------------------------------------------------
    Book now (/booknow)
-   Headline, button, video, button, calendar card, button, proof, button.
+   Stars, trust line, headline, subheadline, button, video, calendar card,
+   button, proof, final button.
    The video frame shows a placeholder until data-vsl-url is set on #booknow-vsl.
    --------------------------------------------------------------------- */
+.booknow-stars { display: flex; justify-content: center; gap: 0.3rem; color: var(--color-star); }
+.booknow-stars svg { width: 26px; height: 26px; }
+.booknow-trust-line { margin: 0.5rem 0 1rem; font-size: 0.95rem; font-weight: 500; color: var(--color-text-muted); }
 .booknow-cta { display: flex; justify-content: center; margin-top: 2rem; }
 .booknow-cta .btn { min-width: min(100%, 300px); }
 .booknow-hero .booknow-cta { margin-top: 1.75rem; }
