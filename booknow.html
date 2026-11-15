@@ -48,6 +48,100 @@ document.addEventListener('click', function (e) {
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://rivannahomecleaning.com/booknow#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rivannahomecleaning.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Book Now",
+      "item": "https://rivannahomecleaning.com/booknow"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://rivannahomecleaning.com/booknow#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's included in a recurring clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A recurring clean covers dusting, vacuuming, mopping, kitchen and bathroom surfaces, trash removal, and general tidying of the main living areas. The first visit goes further, including baseboards, window sills, grout, and fixtures, so later visits start from a true clean baseline. We confirm the checklist when you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the free 30-minute estimate work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We confirm a time to walk through your home for a free 30-minute estimate. We look at the space with you, then give you one flat price before you commit to anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does pricing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get one flat price, set at the estimate, before you commit. Most recurring cleans run $250 to $400 a visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between weekly and every two weeks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weekly visits suit busy homes and homes with pets. Every two weeks holds a steady baseline with fewer visits. Either way, the flat price is set at your estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Leave a key, a garage code, or a door code on the quote form, and we handle the rest. You can be home if you prefer. Either way, tell us about alarms and pets and parking when you book so the visit runs smoothly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your cleaners insured and background-checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our cleaners are insured and background-checked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if something is missed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tell us within 24 hours and we come back and fix it free. That is our Make-It-Right Guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you bring your own supplies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we bring our own cleaning supplies and equipment. If you'd prefer we use specific products in your home, just let us know when you book."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="funnel-page">
 <noscript><img height="1" width="1" style="display:none" alt=""
@@ -63,9 +157,10 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
 
 <main id="main">
 
-  <!-- 1. STARS, TRUST LINE, HEADLINE, SUBHEADLINE -->
+  <!-- 1. BREADCRUMB, STARS, EYEBROW, HEADLINE -->
   <section class="booknow-hero">
     <div class="container">
+      <p class="breadcrumbs"><a href="/">Home</a> / <span aria-current="page">Book Now</span></p>
       <div class="booknow-stars" role="img" aria-label="5 stars">
         <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
         <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
@@ -73,7 +168,7 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
         <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
         <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
       </div>
-      <p class="booknow-trust-line">Charlottesville Virginia's most trusted cleaning company</p>
+      <p class="eyebrow">5-star rated on Google</p>
       <h1>Book Your House Cleaning Appointment in Charlottesville</h1>
       <p class="booknow-subhead">Pick a time on the calendar below. Our insured local team will confirm your visit.</p>
     </div>
@@ -152,12 +247,102 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
     </script>
   </section>
 
-  <!-- 3. CALENDAR EMBED CARD -->
+  <section class="booknow-jump">
+    <div class="container">
+      <a class="btn btn-primary" href="#book">BOOK A QUOTE OVER CALL/TEXT</a>
+    </div>
+  </section>
+
+  <section class="booknow-faq" id="faq" aria-labelledby="booknow-faq-heading">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Questions</span>
+        <h2 id="booknow-faq-heading">Before You Book</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a1" id="booknow-faq-q1">
+            What's included in a recurring clean?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a1" role="region" aria-labelledby="booknow-faq-q1" hidden>
+            <p>A recurring clean covers dusting, vacuuming, mopping, kitchen and bathroom surfaces, trash removal, and general tidying of the main living areas. The first visit goes further, including baseboards, window sills, grout, and fixtures, so later visits start from a true clean baseline. We confirm the checklist when you book.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a2" id="booknow-faq-q2">
+            How does the free 30-minute estimate work?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a2" role="region" aria-labelledby="booknow-faq-q2" hidden>
+            <p>We confirm a time to walk through your home for a free 30-minute estimate. We look at the space with you, then give you one flat price before you commit to anything.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a3" id="booknow-faq-q3">
+            How does pricing work?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a3" role="region" aria-labelledby="booknow-faq-q3" hidden>
+            <p>You get one flat price, set at the estimate, before you commit. Most recurring cleans run $250 to $400 a visit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a4" id="booknow-faq-q4">
+            What is the difference between weekly and every two weeks?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a4" role="region" aria-labelledby="booknow-faq-q4" hidden>
+            <p>Weekly visits suit busy homes and homes with pets. Every two weeks holds a steady baseline with fewer visits. Either way, the flat price is set at your estimate.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a5" id="booknow-faq-q5">
+            Do I need to be home?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a5" role="region" aria-labelledby="booknow-faq-q5" hidden>
+            <p>No. Leave a key, a garage code, or a door code on the quote form, and we handle the rest. You can be home if you prefer. Either way, tell us about alarms and pets and parking when you book so the visit runs smoothly.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a6" id="booknow-faq-q6">
+            Are your cleaners insured and background-checked?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a6" role="region" aria-labelledby="booknow-faq-q6" hidden>
+            <p>Yes. Our cleaners are insured and background-checked.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a7" id="booknow-faq-q7">
+            What if something is missed?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a7" role="region" aria-labelledby="booknow-faq-q7" hidden>
+            <p>Tell us within 24 hours and we come back and fix it free. That is our Make-It-Right Guarantee.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="booknow-faq-a8" id="booknow-faq-q8">
+            Do you bring your own supplies?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="booknow-faq-a8" role="region" aria-labelledby="booknow-faq-q8" hidden>
+            <p>Yes, we bring our own cleaning supplies and equipment. If you'd prefer we use specific products in your home, just let us know when you book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR EMBED CARD -->
   <section class="booknow-book" id="book" aria-labelledby="book-heading">
     <div class="container">
       <div class="booknow-card">
         <span class="eyebrow">Book an appointment</span>
         <h2 id="book-heading">Choose a Day and Time</h2>
+        <p class="booknow-reach">You'll receive a call or text from <a href="tel:+14342056384">(434) 205-6384</a>.</p>
         <p class="booknow-card-intro">Select a time that works for you and fill in your details. We will reach out to confirm your visit.</p>
 
         <!--
@@ -165,6 +350,12 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
           This is Joel's GoHighLevel / LeadConnector "Quick Book" calendar (k2QR6BUxxsdIHPbV6qOt).
           To use a different calendar, paste the GHL calendar embed code (Calendars > Share > Embed)
           in place of the iframe + script below, or swap k2QR6BUxxsdIHPbV6qOt in the src and id.
+
+          After a booking, GHL does not post a success event the page can trust.
+          The live widget only messages height and sticky-contact updates.
+          Redirect is a calendar setting: Calendars > Quick Book > confirmation,
+          change Thank You Message to Redirect URL, and paste
+          https://rivannahomecleaning.com/booking-confirmed
         -->
         <div class="booknow-calendar-slot">
           <iframe
@@ -273,6 +464,6 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
   </div>
 </footer>
 
-
+<script src="assets/js/faq.js"></script>
 </body>
 </html>
