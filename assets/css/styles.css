@@ -1,7 +1,8 @@
 /* =========================================================================
    Rivanna Home Cleaning: hand-written, mobile-first stylesheet
    Palette: deep teal #184D59 / aqua tint #EDF4F3 / mid teal #237080 /
-            cool charcoal #1E2E33 / success green #2E7D4F (forms only)
+            cool charcoal #1E2E33 / success green #2E7D4F (forms only) /
+            coral #E4572E for primary buttons only
             (matched to assets/images/rivanna-logo.svg)
    Type: Bitter (headlines, a sturdy slab serif that reads local, not template) + Public Sans (body,
             a large-x-height, high-legibility sans built for readability at every age)
@@ -10,6 +11,8 @@
 :root {
   --color-action: #184D59;
   --color-action-dark: #0F3641;
+  --cta: #E4572E;
+  --cta-hover: #C7431F;
   --color-text: #1E2E33;
   --color-text-muted: #4E6267;
   --color-surface: #FFFFFF;
@@ -106,8 +109,19 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   white-space: nowrap;
 }
 .btn:hover { text-decoration: none; }
-.btn-primary { background: var(--color-action); color: var(--color-surface); }
-.btn-primary:hover { background: var(--color-action-dark); }
+.btn-primary {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: var(--color-surface);
+}
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary:active {
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+  color: var(--color-surface);
+}
+.btn-primary:focus-visible { outline-color: var(--cta-hover); }
 .btn-secondary { background: var(--color-ridge); color: var(--color-surface); }
 .btn-secondary:hover { background: var(--color-ridge); filter: brightness(0.9); }
 .btn-outline { background: transparent; border-color: var(--color-action); color: var(--color-action); }
