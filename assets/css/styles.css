@@ -691,6 +691,34 @@ html:has(body.funnel-page) { scroll-padding-top: 76px; }
 .booknow-card-intro { color: var(--color-text-muted); margin: 0 0 1.25rem; }
 .booknow-confirm { text-align: center; }
 .booknow-confirm .btn { margin-top: 0.5rem; }
+
+/* Booking confirmation (/booking-confirmed). Calm post-booking page. */
+.confirm-narrow { max-width: 780px; margin-inline: auto; }
+.confirm-page a[href^="tel:"] { white-space: nowrap; }
+.confirm-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.15rem; }
+.confirm-actions .btn { min-height: 48px; }
+.confirm-hint { margin: 0.9rem auto 0; max-width: 42ch; font-size: 0.95rem; color: var(--color-text-muted); }
+.confirm-note-section { padding-top: 0.5rem; }
+#confirm-video:empty { display: none; }
+#confirm-video wistia-player { display: block; width: 100%; margin: 0 auto 1.25rem; }
+.confirm-note {
+  background: var(--color-surface-alt);
+  border-top: 4px solid var(--color-action);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  text-align: left;
+}
+.confirm-note p { margin: 0 0 0.9rem; }
+.confirm-sign { margin: 1.1rem 0 0; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
+.confirm-sign span { display: block; margin-top: 0.15rem; font-family: var(--font-body); font-weight: 500; font-size: 0.95rem; color: var(--color-text-muted); }
+.confirm-page .num-list { margin-top: 0.25rem; }
+.confirm-handy-title { margin: 1.75rem 0 0.4rem; font-size: 1.2rem; }
+.confirm-handy { list-style: disc; margin: 0; padding-left: 1.25rem; display: grid; gap: 0.35rem; }
+.confirm-page .booknow-faq .section-head { margin-inline: 0; text-align: left; }
+.confirm-page .booknow-faq .faq-list { margin-inline: 0; }
+.confirm-stars { justify-content: center; margin-bottom: 0.35rem; }
+.confirm-stars svg { width: 18px; height: 18px; }
+.confirm-reschedule { text-align: center; background: var(--color-surface-alt); }
+.confirm-reschedule p { margin: 0; font-weight: 700; font-size: 1.2rem; }
 .booknow-calendar-slot { width: 100%; min-height: 640px; }
 .booknow-calendar-slot iframe { display: block; width: 100%; min-height: 640px; border: 0; }
 .booknow-card-fallback {
