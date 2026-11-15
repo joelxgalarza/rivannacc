@@ -33,7 +33,7 @@ document.addEventListener('click', function (e) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>You're booked | Rivanna Home Cleaning</title>
-<meta name="description" content="Your Rivanna Home Cleaning request is in. We will call or text to confirm a time for your free 30-minute estimate.">
+<meta name="description" content="You're booked for a Rivanna Home Cleaning estimate. We call or text from (434) 205-6384 at the time you chose.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://rivannahomecleaning.com/booking-confirmed">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,7 @@ document.addEventListener('click', function (e) {
 <meta name="theme-color" content="#184D59">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="funnel-page">
+<body class="funnel-page confirm-page">
 <noscript><img height="1" width="1" style="display:none" alt=""
 src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
 /></noscript>
@@ -61,23 +61,236 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
 </header>
 
 <main id="main">
+
   <section class="booknow-hero">
-    <div class="container">
-      <h1>Thank you</h1>
-      <p class="booknow-subhead">You'll receive a call or text from <a href="tel:+14342056384">(434) 205-6384</a> shortly.</p>
+    <div class="container confirm-narrow">
+      <h1>You're booked</h1>
+      <p class="booknow-subhead">We will call or text you from <a href="tel:+14342056384">(434) 205-6384</a> at the time you booked.</p>
+      <div class="confirm-actions">
+        <a class="btn btn-outline" href="sms:+14342056384">Text us</a>
+        <a class="btn btn-primary" id="save-number" href="assets/rivanna-home-cleaning.vcf" download="Rivanna-Home-Cleaning.vcf">Save our number</a>
+      </div>
+      <p class="confirm-hint">Saving the number puts Rivanna Home Cleaning in your phone, so the call does not show up as unknown.</p>
     </div>
   </section>
 
-  <section class="booknow-book">
-    <div class="container">
-      <div class="booknow-card booknow-confirm">
+  <section class="confirm-note-section" aria-labelledby="joel-note-heading">
+    <div class="container confirm-narrow">
+      <!--
+        CONFIRMATION VIDEO SLOT
+        One Wistia media id. Put it in data-wistia-id below.
+        When the id is set, that player renders here, above Joel's note.
+        To use the video in place of the note, remove the <article class="confirm-note">.
+        Leave data-wistia-id empty until the video exists. Nothing is shown in this slot while it is empty.
+        data-wistia-id=""
+      -->
+      <div id="confirm-video" data-wistia-id=""></div>
+
+      <article class="confirm-note">
+        <span class="eyebrow" id="joel-note-heading">A note from Joel</span>
+        <p>You booked this time yourself. There is nothing else you need to do, and there is no pressure to stay on the calendar if the time stops working.</p>
+        <p>I am Joel, the owner. Look through the steps and questions below before we talk. Then the call can be about your home, not the basics.</p>
+        <p>We will reach you from <a href="tel:+14342056384">(434) 205-6384</a> at the time you picked. If you would rather text, <a href="sms:+14342056384">text that number</a>. If you need a different time, the same number is how you move it.</p>
+        <p class="confirm-sign">Joel <span>Owner, Rivanna Home Cleaning</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="next-heading">
+    <div class="container confirm-narrow">
+      <div class="section-head">
         <span class="eyebrow">What happens next</span>
-        <h2>We confirm your free estimate</h2>
-        <p>We confirm a time for your free 30-minute estimate. You get one flat price before you commit.</p>
-        <a class="btn btn-primary" href="/">Back to the homepage</a>
+        <h2 id="next-heading">A calm half hour, then a price</h2>
+      </div>
+      <ol class="num-list">
+        <li>
+          <div>
+            <strong>We call or text at your time</strong>
+            <span>The call or text comes from <a href="tel:+14342056384">(434) 205-6384</a>, at the time you booked.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>About a 30-minute conversation</strong>
+            <span>We talk about your home, the rooms, your priorities, pets, and access.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>One flat price before you commit</strong>
+            <span>You hear the price before you agree to anything. Most recurring cleans run $250 to $400 a visit.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>We schedule your first clean</strong>
+            <span>Once the price is set, we put the first visit on the calendar.</span>
+          </div>
+        </li>
+      </ol>
+      <h3 class="confirm-handy-title">To have handy</h3>
+      <ul class="confirm-handy">
+        <li>A rough number of bedrooms and bathrooms</li>
+        <li>Anything that has been bugging you</li>
+        <li>Pets</li>
+        <li>The best way for us to get in</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="booknow-faq" id="faq" aria-labelledby="confirm-faq-heading">
+    <div class="container confirm-narrow">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2 id="confirm-faq-heading">Before the call</h2>
+        <p>These are the practical details, so the conversation can stay on your house.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a1" id="confirm-faq-q1">
+            What does the call cover?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a1" role="region" aria-labelledby="confirm-faq-q1" hidden>
+            <p>About 30 minutes on your home. We cover the rooms you want cleaned, your priorities, pets, and how we should get in.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a2" id="confirm-faq-q2">
+            How does pricing work?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a2" role="region" aria-labelledby="confirm-faq-q2" hidden>
+            <p>You get one flat price before you commit. Most recurring cleans run $250 to $400 a visit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a3" id="confirm-faq-q3">
+            Do I need to be home?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a3" role="region" aria-labelledby="confirm-faq-q3" hidden>
+            <p>For the call, be somewhere you can pick up or read a text. For the clean itself, no. Leave a key, a garage code, or a door code, and we handle the rest. You can be home if you prefer. Tell us about alarms, pets, and parking so the visit runs smoothly.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a4" id="confirm-faq-q4">
+            Do you bring supplies?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a4" role="region" aria-labelledby="confirm-faq-q4" hidden>
+            <p>Yes, we bring our own cleaning supplies and equipment. If you would prefer we use specific products in your home, tell us on the call.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a5" id="confirm-faq-q5">
+            Who cleans, and are they vetted?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a5" role="region" aria-labelledby="confirm-faq-q5" hidden>
+            <p>A Rivanna cleaner does the work. Cleaners are background-checked, and the team is insured.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a6" id="confirm-faq-q6">
+            What if I miss the call or need another time?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a6" role="region" aria-labelledby="confirm-faq-q6" hidden>
+            <p>Call or text <a href="tel:+14342056384">(434) 205-6384</a> and we will move it. That is the same number that will call you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="confirm-faq-a7" id="confirm-faq-q7">
+            Recurring or a one-time clean?
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="confirm-faq-a7" role="region" aria-labelledby="confirm-faq-q7" hidden>
+            <p>Weekly visits suit busy homes and homes with pets. Every two weeks holds a steady baseline with fewer visits. A one-time clean is there when you only need a single visit. The flat price is set on the call, before you commit.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section aria-labelledby="proof-heading">
+    <div class="container">
+      <div class="section-head center">
+        <div class="stars confirm-stars" role="img" aria-label="5 stars">
+          <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+        </div>
+        <p class="eyebrow">5-star rated on Google</p>
+        <h2 id="proof-heading">What neighbors are saying</h2>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-head">
+            <div class="avatar-bubble" style="background:#184D59" aria-hidden="true">P</div>
+            <div class="review-who">
+              <span class="name">Polly</span>
+              <span class="review-meta"><span class="source-badge">Google</span><span>November 2026</span></span>
+            </div>
+          </div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          </div>
+          <p class="review-text">Felicia and Ashley were very pleasant and helpful! They did a beautiful job, above expectations! I look forward to seeing them again.</p>
+          <span class="review-service-tag">Recurring Maid Service</span>
+        </article>
+        <article class="review-card">
+          <div class="review-head">
+            <div class="avatar-bubble" style="background:#14505C" aria-hidden="true">C</div>
+            <div class="review-who">
+              <span class="name">Cindy</span>
+              <span class="review-meta"><span class="source-badge">Google</span><span>November 2026</span></span>
+            </div>
+          </div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          </div>
+          <p class="review-text">The women who deep cleaned my house did a fantastic job! Their attention to the details was incredible and everything looked and smelled so good when they finished.</p>
+          <span class="review-service-tag">Deep Cleaning</span>
+        </article>
+        <article class="review-card">
+          <div class="review-head">
+            <div class="avatar-bubble" style="background:#237080" aria-hidden="true">L</div>
+            <div class="review-who">
+              <span class="name">Layla</span>
+              <span class="review-meta"><span class="source-badge">Google</span><span>November 2026</span></span>
+            </div>
+          </div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5">
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor" stroke="currentColor" stroke-width="1"><path d="M10 1.5l2.47 5.36 5.9.58-4.44 4.03 1.27 5.83L10 14.98l-5.2 3.32 1.27-5.83L1.63 7.44l5.9-.58L10 1.5z"/></svg>
+          </div>
+          <p class="review-text">Rivanna Home Cleaning does a weekly recurring clean at our house in Charlottesville. They have always been on time and they clean every little spot. Our house looks new every time.</p>
+          <span class="review-service-tag">Weekly Recurring Cleaning</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="confirm-reschedule">
+    <div class="container confirm-narrow">
+      <p>Need to reschedule? Call or text <a href="tel:+14342056384">(434) 205-6384</a>.</p>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer funnel-footer">
@@ -92,5 +305,57 @@ src="https://www.facebook.com/tr?id=1357863269567859&ev=PageView&noscript=1"
     </div>
   </div>
 </footer>
+
+<script src="assets/js/faq.js"></script>
+<script>
+(function () {
+  "use strict";
+  var slot = document.getElementById("confirm-video");
+  if (slot) {
+    var id = (slot.getAttribute("data-wistia-id") || "").trim();
+    if (/^[a-z0-9]+$/i.test(id)) {
+      var playerScript = document.createElement("script");
+      playerScript.src = "https://fast.wistia.com/player.js";
+      playerScript.async = true;
+      var embed = document.createElement("script");
+      embed.src = "https://fast.wistia.com/embed/" + id + ".js";
+      embed.async = true;
+      embed.type = "module";
+      document.head.appendChild(playerScript);
+      document.head.appendChild(embed);
+      var style = document.createElement("style");
+      style.textContent = "wistia-player[media-id='" + id + "']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/" + id + "/swatch');display:block;filter:blur(5px);padding-top:56.25%;}";
+      var player = document.createElement("wistia-player");
+      player.setAttribute("media-id", id);
+      player.setAttribute("aspect", "1.7777777777777777");
+      slot.appendChild(style);
+      slot.appendChild(player);
+    }
+  }
+
+  var save = document.getElementById("save-number");
+  if (save && window.fetch && window.Blob) {
+    save.addEventListener("click", function (event) {
+      event.preventDefault();
+      fetch(save.href).then(function (response) {
+        if (!response.ok) throw new Error("missing");
+        return response.text();
+      }).then(function (text) {
+        var blob = new Blob([text], { type: "text/vcard" });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = "Rivanna-Home-Cleaning.vcf";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      }).catch(function () {
+        window.location.href = save.href;
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>
